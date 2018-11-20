@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".planning" />
+        <activity android:name=".demande_intervention" />
+        <activity android:name=".enquete_preliminaire" />
+        <activity android:name=".ep_mauvais" />
+        <activity android:name=".validation_install"></activity>
     </application>
 
 </manifest>
