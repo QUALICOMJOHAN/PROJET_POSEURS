@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/di"
+        android:id="@+id/label_di"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
@@ -35,7 +35,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/di" />
+        app:layout_constraintTop_toBottomOf="@+id/label_di" />
 
     <LinearLayout
         android:id="@+id/infos_ctn"
@@ -195,7 +195,7 @@
         app:layout_constraintTop_toBottomOf="@+id/infos_ctn" />
 
     <ScrollView
-        android:id="@+id/intervention_scroll"
+        android:id="@+id/détail_intervention_scroll"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginStart="50dp"
@@ -215,10 +215,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/intervention_scroll">
+        app:layout_constraintTop_toBottomOf="@+id/détail_intervention_scroll">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/commencer_inter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"

@@ -7,10 +7,10 @@
     tools:context=".enquete_preliminaire">
 
     <TextView
-        android:id="@+id/ep_mauvais"
+        android:id="@+id/label_di"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Demande d'intervention"
         android:textAlignment="center"
@@ -30,17 +30,17 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ep_mauvais">
+        app:layout_constraintTop_toBottomOf="@+id/label_di">
 
         <TextView
-            android:id="@+id/q"
+            android:id="@+id/label_valid_inter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Etes-vous satisfait de notre technicien M. TECHNICIEN ?"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ep_mauvais" />
+            app:layout_constraintTop_toBottomOf="@+id/label_di" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/q">
+            app:layout_constraintTop_toBottomOf="@+id/label_valid_inter">
 
             <Button
                 android:id="@+id/oui"
@@ -82,7 +82,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ep_mauvais" />
+            app:layout_constraintTop_toBottomOf="@+id/label_di" />
 
     </LinearLayout>
 

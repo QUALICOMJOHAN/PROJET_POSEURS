@@ -20,7 +20,11 @@
         <activity android:name=".demande_intervention" />
         <activity android:name=".enquete_preliminaire" />
         <activity android:name=".ep_mauvais" />
-        <activity android:name=".validation_install"></activity>
+        <activity android:name=".validation_install" />
+        <activity android:name=".photo_pre_inter" />
+        <activity android:name=".photo_pre_inter_2" />
+        <activity android:name=".valid_photo_pre_inter" />
+        <activity android:name=".guide_inter"></activity>
     </application>
 
 </manifest>
