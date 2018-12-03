@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photo_pre_inter_2">
+    tools:context=".compte_rendu_signature">
 
     <TextView
-        android:id="@+id/label_photo"
+        android:id="@+id/label_cr"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingTop="25dp"
-        android:text="Photographies pré-intervention"
+        android:text="Compte rendu d'intervention"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -23,38 +23,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/guide_ctn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="700dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_photo">
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/label_cr">
 
         <TextView
-            android:id="@+id/label_photo_element"
+            android:id="@+id/label_photo_souvenir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="25dp"
-            android:text="Element"
+            android:text="Signature du responsable technicien"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextureView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp">
+            android:layout_height="200dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="#eee">
 
-        </TextureView>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/label_valid_inter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Signature du client"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="#eee">
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/guide_ctn">
 
         <Button
-            android:id="@+id/next_photo"
+            android:id="@+id/suivant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:background="#ddd"
             android:paddingLeft="75dp"
             android:paddingTop="25dp"
@@ -62,8 +88,7 @@
             android:paddingBottom="25dp"
             android:text="Suivant"
             android:textColor="@android:color/white" />
-
-    </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -75,4 +100,6 @@
         app:layout_constraintRight_toRightOf="parent">
 
     </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

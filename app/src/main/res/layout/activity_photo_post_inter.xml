@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photo_pre_inter_2">
+    tools:context=".photo_post_inter">
 
     <TextView
-        android:id="@+id/label_photo"
+        android:id="@+id/label_photo_post_inter"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Photographies pré-intervention"
+        android:text="Photographies post-intervention"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -24,34 +24,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_photo">
+        app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/label_photo_element"
+            android:id="@+id/label_prendre_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="25dp"
-            android:text="Element"
+            android:text="Prenez en photo les élements après l'intervention"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:textSize="36sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextureView
-            android:layout_width="match_parent"
-            android:layout_height="600dp">
-
-        </TextureView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <Button
-            android:id="@+id/next_photo"
+            android:id="@+id/commencer_photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -60,7 +54,7 @@
             android:paddingTop="25dp"
             android:paddingRight="75dp"
             android:paddingBottom="25dp"
-            android:text="Suivant"
+            android:text="Commencer"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

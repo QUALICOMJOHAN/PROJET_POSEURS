@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".guide_inter">
+    tools:context=".q_satisfaction_temoignage">
 
     <TextView
-        android:id="@+id/label_guide_inter"
+        android:id="@+id/label_qs2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingTop="25dp"
-        android:text="Guide d'intervention"
+        android:text="Questionnaire de satisfaction"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -23,7 +23,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/guide_ctn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -31,43 +30,44 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_guide_inter">
+        app:layout_constraintTop_toBottomOf="@+id/label_qs2">
 
         <TextView
-            android:id="@+id/label_photo_souvenir"
+            android:id="@+id/label_temoignage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Veuillez suivre chaque étape pour l’intervention"
+            android:text="Vous pouvez maintenant rédiger quelques phrases pour témoigner de votre expérience d’intervention Hitech Habitats Services"
             android:textAlignment="center"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-        <ScrollView
-            android:id="@+id/détail_intervention_scroll"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/temoignage_ctn"
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/intervention">
+            android:layout_marginTop="25dp">
 
-            <LinearLayout
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input_temoignage"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" />
-        </ScrollView>
+                android:layout_height="wrap_content"
+                android:hint="Commencez à ecrire ici ..."
+                android:textSize="18sp" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
+            android:id="@+id/suivant_ctn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/détail_intervention_scroll">
+            app:layout_constraintTop_toBottomOf="@+id/satis_ctn"
+            tools:layout_editor_absoluteX="50dp">
 
             <Button
-                android:id="@+id/suivant"
+                android:id="@+id/valider"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ddd"
@@ -75,7 +75,7 @@
                 android:paddingTop="25dp"
                 android:paddingRight="75dp"
                 android:paddingBottom="25dp"
-                android:text="Suivant"
+                android:text="Valider"
                 android:textColor="@android:color/white" />
         </RelativeLayout>
 

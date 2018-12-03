@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".valid_photo_pre_inter">
+    tools:context=".recap_photos_thermiques">
 
     <TextView
-        android:id="@+id/label_recap"
+        android:id="@+id/label_it"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Récapitulatif photographies pré-intervention"
+        android:text="Images thermiques"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -34,8 +34,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_recap" />
+        app:layout_constraintTop_toBottomOf="@+id/label_it" />
 
     <ScrollView
         android:id="@+id/scroll_recap"
