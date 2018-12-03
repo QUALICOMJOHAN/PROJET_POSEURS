@@ -24,7 +24,31 @@
         <activity android:name=".photo_pre_inter" />
         <activity android:name=".photo_pre_inter_2" />
         <activity android:name=".valid_photo_pre_inter" />
-        <activity android:name=".guide_inter"></activity>
+        <activity android:name=".guide_inter" />
+        <activity android:name=".compte_rendu_signature" />
+        <activity android:name=".compte_rendu_q" />
+        <activity android:name=".proces_verbal" />
+        <activity android:name=".proces_verbal_signature" />
+        <activity android:name=".proces_verbal_signature2" />
+        <activity android:name=".q_satisfaction" />
+        <activity android:name=".q_satisfaction2" />
+        <activity android:name=".q_satisfaction3" />
+        <activity android:name=".q_satisfaction_temoignage" />
+        <activity android:name=".q_satisfaction_photo" />
+        <activity android:name=".q_satisfaction_validation" />
+        <activity android:name=".sepa_photo" />
+        <activity android:name=".demande_financement" />
+        <activity android:name=".cheque_paiement" />
+        <activity android:name=".finalisation_inter" />
+        <activity android:name=".finalisation_inter_certif" />
+        <activity android:name=".finalisation_inter_import_thermique" />
+        <activity android:name=".recap_photos_thermiques" />
+        <activity android:name=".finalisation_rappel_envoi_docs" />
+        <activity android:name=".final_final" />
+        <activity android:name=".q_satisfaction_autor" />
+        <activity android:name=".photo_post_inter" />
+        <activity android:name=".photo_post_inter2" />
+        <activity android:name=".valid_photo_post_inter"></activity>
     </application>
 
 </manifest>

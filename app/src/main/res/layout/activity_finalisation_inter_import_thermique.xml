@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photo_pre_inter_2">
+    tools:context=".finalisation_inter_import_thermique">
 
     <TextView
-        android:id="@+id/label_photo"
+        android:id="@+id/label_it"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Photographies pré-intervention"
+        android:text="Images thermiques"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -24,40 +24,42 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_photo">
+        android:paddingStart="100dp"
+        android:paddingEnd="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/label_it">
 
         <TextView
-            android:id="@+id/label_photo_element"
+            android:id="@+id/label_livret"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="25dp"
-            android:text="Element"
+            android:layout_marginTop="50dp"
+            android:text="Veuillez importer les images thermiques :"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:textSize="36sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-        <TextureView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp">
-
-        </TextureView>
+            android:layout_height="500dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"></LinearLayout>
 
         <Button
-            android:id="@+id/next_photo"
+            android:id="@+id/suivant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:background="#ddd"
+            android:paddingStart="50dp"
             android:paddingLeft="75dp"
             android:paddingTop="25dp"
+            android:paddingEnd="50dp"
             android:paddingRight="75dp"
             android:paddingBottom="25dp"
             android:text="Suivant"

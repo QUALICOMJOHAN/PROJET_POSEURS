@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photo_pre_inter_2">
+    tools:context=".final_final">
 
     <TextView
-        android:id="@+id/label_photo"
+        android:id="@+id/label_qst2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Photographies pré-intervention"
+        android:text="Qestionnaire de satisfaction terminé"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -24,43 +24,44 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_photo">
+        app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/label_photo_element"
+            android:id="@+id/label_qsfini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="25dp"
-            android:text="Element"
+            android:text="Felicitations ! L'intervention est terminée"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:textSize="36sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-        <TextureView
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="600dp">
-
-        </TextureView>
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/termine" />
 
         <Button
-            android:id="@+id/next_photo"
+            android:id="@+id/terminer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:background="#ddd"
             android:paddingLeft="75dp"
             android:paddingTop="25dp"
             android:paddingRight="75dp"
             android:paddingBottom="25dp"
-            android:text="Suivant"
+            android:text="Terminer"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

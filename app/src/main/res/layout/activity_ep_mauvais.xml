@@ -7,12 +7,12 @@
     tools:context=".ep_mauvais">
 
     <TextView
-        android:id="@+id/label_di"
+        android:id="@+id/label_ep"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Demande d'intervention"
+        android:text="Enquête préliminaire"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -30,17 +30,17 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_di">
+        app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/label_valid_inter"
+            android:id="@+id/label_photo_souvenir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Certaines questions ont reçu des réponses inattendues, veuillez contacter ce numéro pour résoudre ces questions"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_di" />
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <TextView
             android:id="@+id/num_mauvais"
@@ -50,11 +50,11 @@
             android:layout_marginBottom="50dp"
             android:text="06 00 00 00 00"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_di" />
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <Button
             android:id="@+id/suivant"

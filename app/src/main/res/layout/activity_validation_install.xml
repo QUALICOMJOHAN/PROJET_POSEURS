@@ -22,6 +22,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RelativeLayout
+        android:id="@+id/motifhhs"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/motifhhs"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,10 +41,10 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_di">
+        app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/label_valid_inter"
+            android:id="@+id/label_commencer_install"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vous pouvez commencer l'installation"
@@ -42,10 +53,10 @@
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_di" />
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/check"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="25dp"
@@ -53,7 +64,7 @@
             app:srcCompat="@drawable/valider" />
 
         <Button
-            android:id="@+id/valid_commencer_inter"
+            android:id="@+id/commencer_inter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#ddd"
