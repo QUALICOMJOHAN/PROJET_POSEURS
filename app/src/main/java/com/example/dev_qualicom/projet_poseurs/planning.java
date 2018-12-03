@@ -1,6 +1,7 @@
 package com.example.dev_qualicom.projet_poseurs;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -81,6 +82,22 @@ public class planning extends AppCompatActivity {
             poses.add(p);
 
         }
+
+        currentDay = new Date(currentDay.getTime() + (2000 * 60 * 60 * 24));
+
+        for (int k = 2; k <= 6; k++) {
+
+            currentDay = new Date(currentDay.getTime() + (1000 * 60 * 60 * 24));
+            currentDayString = df.format(currentDay);
+
+            p = new Pose();
+            p.setTitle((String) DateFormat.format("EEEE", currentDay));
+            p.setStart(new Timestamp(currentDay));
+
+            poses.add(p);
+
+        }
+
         db.collection("Poses").orderBy("start").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -167,11 +184,19 @@ public class planning extends AppCompatActivity {
 
         public void bind(Pose pose) {
 
-            title.setText(pose.getTitle());
             if(pose.getEquipe() == null){
-                date.setText(getDate(pose.getStart().getSeconds() * 1000, "dd/MM/yyyy"));
+                title.setText(getDate(pose.getStart().getSeconds() * 1000, "dd/MM/yyyy"));
+                this.itemView.setBackgroundColor(Color.parseColor("#dddddd"));
+                title.setTextColor(Color.parseColor("#ffffff"));
+                date.setTextColor(Color.parseColor("#ffffff"));
             }else{
-                date.setText(getDate(pose.getStart().getSeconds() * 1000, "dd/MM/yyyy HH:mm"));
+                title.setText(pose.getTitle());
+            }
+
+            if(pose.getEquipe() == null){
+                date.setText(pose.getTitle().toUpperCase());
+            }else{
+                date.setText(getDate(pose.getStart().getSeconds() * 1000, "HH:mm"));
                 this.itemView.setId(poses.indexOf(pose));
                 this.itemView.setOnClickListener(this);
             }

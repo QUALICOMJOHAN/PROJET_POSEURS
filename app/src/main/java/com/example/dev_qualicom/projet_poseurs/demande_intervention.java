@@ -11,6 +11,7 @@ import android.widget.Button;
 public class demande_intervention extends AppCompatActivity {
 
     Button start_intervention;
+    String id_pose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class demande_intervention extends AppCompatActivity {
         setContentView(R.layout.activity_demande_intervention);
 
         start_intervention = (Button) findViewById(R.id.commencer_inter);
+        id_pose = getIntent().getStringExtra("id_pose");
 
         start_intervention.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,7 @@ public class demande_intervention extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent i = new Intent(demande_intervention.this, enquete_preliminaire.class);
+                                i.putExtra("id_pose", id_pose);
                                 startActivity(i);
                             }
                         })
