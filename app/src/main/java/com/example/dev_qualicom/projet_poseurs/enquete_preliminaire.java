@@ -1,5 +1,6 @@
 package com.example.dev_qualicom.projet_poseurs;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
@@ -44,14 +45,14 @@ public class enquete_preliminaire extends AppCompatActivity {
         oui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                q_suivante(true);
             }
         });
 
         non.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                q_suivante(false);
             }
         });
 
@@ -97,26 +98,36 @@ public class enquete_preliminaire extends AppCompatActivity {
     }
 
     private void q_suivante(boolean reponse){
-        tabq.get(currentq).setReponse(reponse);
+        tabq.get(currentq-1).setReponse(reponse);
         currentq ++;
 
-        question.setText(tabq.get(currentq).getQuestion());
-        numq.setText(tabq.get(currentq).getNum()+"/10");
+        if(currentq > tabq.size()){
 
+            for(Question q : tabq){
+                if(!q.isEqual()){
+                    Intent intent = new Intent(enquete_preliminaire.this, ep_mauvais.class);
+                    startActivity(intent);
+                }
+            }
+
+        }else{
+            question.setText(tabq.get(currentq-1).getQuestion());
+            numq.setText(tabq.get(currentq-1).getNum()+"/10");
+        }
     }
 
     private void init_tab_question(){
 
-        tabq.add(new Question(1, "Enquête préliminaire Etes-vous satisfait de notre technicien M.TECHNICIEN ?"));
-        tabq.add(new Question(2, "Avez-vous parfaitement compris ses explications ?"));
-        tabq.add(new Question(3, "Avez-vous compris l’ensemble de votre bon de commande ?"));
-        tabq.add(new Question(4, "Avez-vous des questions sur votre offre de financement ?"));
-        tabq.add(new Question(5, "Avez-vous en votre possession votre double du bon de commande ?"));
-        tabq.add(new Question(6, "Avez-vous en votre possession le double de votre dossier de financement ?"));
-        tabq.add(new Question(7, "Avez-vous en votre possession votre extension de garantie ?"));
-        tabq.add(new Question(8, "Avez-vous en votre possession votre contrat d’entretien avec le montant annuel inscrit  ?"));
-        tabq.add(new Question(9, "Avez-vous d’autres questions ?"));
-        tabq.add(new Question(10, "Pouvons-nous commencer la prestation technique et l’installation de votre matériel conformément à votre bon de commande ?"));
+        tabq.add(new Question(1, "Enquête préliminaire Etes-vous satisfait de notre technicien M.TECHNICIEN ?",true));
+        tabq.add(new Question(2, "Avez-vous parfaitement compris ses explications ?",true));
+        tabq.add(new Question(3, "Avez-vous compris l’ensemble de votre bon de commande ?",true));
+        tabq.add(new Question(4, "Avez-vous des questions sur votre offre de financement ?",false));
+        tabq.add(new Question(5, "Avez-vous en votre possession votre double du bon de commande ?",true));
+        tabq.add(new Question(6, "Avez-vous en votre possession le double de votre dossier de financement ?",true));
+        tabq.add(new Question(7, "Avez-vous en votre possession votre extension de garantie ?",true));
+        tabq.add(new Question(8, "Avez-vous en votre possession votre contrat d’entretien avec le montant annuel inscrit  ?",true));
+        tabq.add(new Question(9, "Avez-vous d’autres questions ?",false));
+        tabq.add(new Question(10, "Pouvons-nous commencer la prestation technique et l’installation de votre matériel conformément à votre bon de commande ?",true));
 
     }
 

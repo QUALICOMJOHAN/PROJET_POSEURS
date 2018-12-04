@@ -98,7 +98,7 @@ public class planning extends AppCompatActivity {
 
         }
 
-        db.collection("Poses").orderBy("start").startAfter(poses.get(1).getStart().getSeconds()).get()
+        db.collection("Poses").orderBy("start").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -106,8 +106,9 @@ public class planning extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
                                 Pose pose = document.toObject(Pose.class);
-                                poses.add(pose);
-
+                                if(pose.getStart().getSeconds() > poses.get(0).getStart().getSeconds()) {
+                                    poses.add(pose);
+                                }
                             }
 
                             Collections.sort(poses, new Comparator<Pose>() {

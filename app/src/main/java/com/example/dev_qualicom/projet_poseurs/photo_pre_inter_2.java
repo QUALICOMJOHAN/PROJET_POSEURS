@@ -82,7 +82,7 @@ public class photo_pre_inter_2 extends AppCompatActivity {
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
 
-        takePictureButton = (Button) findViewById(R.id.next_photo);
+        takePictureButton = (Button) findViewById(R.id.takePictureButton);
 
         oui = (Button) findViewById(R.id.oui);
         non = (Button) findViewById(R.id.non);
