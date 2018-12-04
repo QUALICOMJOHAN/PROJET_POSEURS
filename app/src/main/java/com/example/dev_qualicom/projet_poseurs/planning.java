@@ -98,7 +98,7 @@ public class planning extends AppCompatActivity {
 
         }
 
-        db.collection("Poses").orderBy("start").get()
+        db.collection("Poses").orderBy("start").startAfter(poses.get(1).getStart().getSeconds()).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
