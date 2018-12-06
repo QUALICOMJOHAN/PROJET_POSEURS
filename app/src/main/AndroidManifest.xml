@@ -3,9 +3,7 @@
     package="com.example.dev_qualicom.projet_poseurs">
 
     <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature android:name="android.hardware.camera" />
-
+    <uses-feature android:name="android.hardware.camera2.full"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -20,7 +18,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.dev_qualicom.projet_poseurs.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,13 +70,7 @@
         <activity android:name=".q_satisfaction_autor" />
         <activity android:name=".photo_post_inter" />
         <activity android:name=".photo_post_inter2" />
-        <activity android:name=".valid_photo_post_inter" />
-        <activity android:name=".donner_tab_client" />
-        <activity android:name=".enquete_preliminaire_terminee" />
-        <activity android:name=".photo_pre_inter_avant" />
-        <activity android:name=".photo_pre_inter_item" />
-        <activity android:name=".photo_post_inter_avant" />
-        <activity android:name=".compte_rendu"></activity>
+        <activity android:name=".valid_photo_post_inter"></activity>
     </application>
 
 </manifest>

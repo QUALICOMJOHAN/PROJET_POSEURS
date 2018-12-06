@@ -56,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent i = new Intent(MainActivity.this, photo_pre_inter.class);
+        startActivity(i);
+
+//        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//        intent.setType("file/*");
+//        startActivityForResult(intent, 2);
+
         checkPermissions();
 
         login = (TextView) findViewById(R.id.identifiant);
@@ -166,6 +173,19 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return "";
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        try {
+
+            Log.i("TAG", intent.getData().toString());
+
+        } catch (Exception error) {
+            Log.i("TAG", "Bite6");
+            error.printStackTrace();
+        }
     }
 
 }
