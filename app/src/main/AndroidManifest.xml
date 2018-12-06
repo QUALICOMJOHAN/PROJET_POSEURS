@@ -3,7 +3,9 @@
     package="com.example.dev_qualicom.projet_poseurs">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -58,7 +60,11 @@
         <activity android:name=".q_satisfaction_autor" />
         <activity android:name=".photo_post_inter" />
         <activity android:name=".photo_post_inter2" />
-        <activity android:name=".valid_photo_post_inter"></activity>
+        <activity android:name=".valid_photo_post_inter" />
+        <activity android:name=".donner_tab_client" />
+        <activity android:name=".enquete_preliminaire_terminee" />
+        <activity android:name=".photo_pre_inter_avant" />
+        <activity android:name=".photo_pre_inter_item"></activity>
     </application>
 
 </manifest>
