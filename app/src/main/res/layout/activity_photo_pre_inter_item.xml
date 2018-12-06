@@ -9,13 +9,13 @@
     tools:context=".photo_pre_inter_item">
 
     <ImageView
-        android:id="@+id/imageView26"
+        android:id="@+id/item_photo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:srcCompat="@drawable/motifhhs" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/item_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="175dp"
@@ -23,7 +23,7 @@
         android:paddingTop="25dp"
         android:text="Pannneaux solaires avant nettoyage, vue d’ensemble"
         android:textSize="24sp"
-        app:layout_constraintLeft_toRightOf="@+id/imageView26" />
+        app:layout_constraintLeft_toRightOf="@+id/item_photo" />
 
     <View
 
@@ -36,6 +36,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+        app:layout_constraintTop_toBottomOf="@+id/item_photo" />
 
 </android.support.constraint.ConstraintLayout>
