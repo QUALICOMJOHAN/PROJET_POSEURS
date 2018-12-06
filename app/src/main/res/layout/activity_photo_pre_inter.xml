@@ -41,7 +41,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="225dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="225sp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,33 +51,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rep_inattendues2">
 
-        <LinearLayout
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/liste_photos"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="225dp"
+            tools:listitem="@layout/activity_photo_pre_inter_item" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/liste_photos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="100dp"
-                tools:listitem="@layout/activity_photo_pre_inter_item" />
 
-            <Button
-                android:id="@+id/suivant"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="#ddd"
-                android:paddingLeft="75dp"
-                android:paddingTop="25dp"
-                android:paddingRight="75dp"
-                android:paddingBottom="25dp"
-                android:text="Suivant"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
+
     </ScrollView>
 
     <LinearLayout
