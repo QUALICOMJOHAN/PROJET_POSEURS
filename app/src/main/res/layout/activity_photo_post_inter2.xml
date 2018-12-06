@@ -7,7 +7,7 @@
     tools:context=".photo_post_inter2">
 
     <TextView
-        android:id="@+id/label_photo"
+        android:id="@+id/label_photo2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
@@ -22,57 +22,109 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         app:layout_constraintTop_toBottomOf="@+id/label_photo">
 
-        <TextView
-            android:id="@+id/label_photo_element"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="25dp"
-            android:text="Element"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_photo">
 
-        <TextureView
-            android:layout_width="match_parent"
-            android:layout_height="600dp">
+            <TextView
+                android:id="@+id/label_photo_element"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="50dp"
+                android:paddingTop="25dp"
+                android:paddingEnd="50dp"
+                android:paddingBottom="25dp"
+                android:text="Element"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        </TextureView>
+            <TextureView
+                android:id="@+id/camera_preview"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp">
 
-        <Button
-            android:id="@+id/next_photo"
+            </TextureView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/non"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="recommencer"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/oui"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Valider"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#ddd"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Suivant"
-            android:textColor="@android:color/white" />
+            android:layout_weight="2"
+            android:paddingLeft="100dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logohhs" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/motifhhs" />
 
     </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

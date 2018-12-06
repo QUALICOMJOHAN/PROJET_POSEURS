@@ -64,7 +64,9 @@
         <activity android:name=".donner_tab_client" />
         <activity android:name=".enquete_preliminaire_terminee" />
         <activity android:name=".photo_pre_inter_avant" />
-        <activity android:name=".photo_pre_inter_item"></activity>
+        <activity android:name=".photo_pre_inter_item" />
+        <activity android:name=".photo_post_inter_avant" />
+        <activity android:name=".compte_rendu"></activity>
     </application>
 
 </manifest>

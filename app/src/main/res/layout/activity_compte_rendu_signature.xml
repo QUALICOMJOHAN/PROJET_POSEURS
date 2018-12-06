@@ -23,9 +23,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/guide_ctn"
+        android:id="@+id/cr_signatures"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="650dp"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="50dp"
@@ -36,70 +36,118 @@
             android:id="@+id/label_photo_souvenir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:text="Signature du responsable technicien"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <FrameLayout
+        <TextureView
+            android:id="@+id/textureView7"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
-            android:background="#eee">
-
-        </FrameLayout>
+            android:backgroundTint="#ddd" />
 
         <TextView
             android:id="@+id/label_valid_inter2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Signature du client"
+            android:layout_marginTop="10dp"
+            android:text="Signature assistants"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
-            android:background="#eee">
+            android:layout_height="125dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-        </FrameLayout>
+            <TextureView
+                android:id="@+id/textureView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ddd" />
+
+            <TextureView
+                android:id="@+id/textureView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ddd" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextureView
+                android:id="@+id/textureView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ddd" />
+
+            <TextureView
+                android:id="@+id/textureView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ddd" />
+        </LinearLayout>
 
 
     </LinearLayout>
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/suivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ddd"
+        android:gravity="center"
+        android:paddingLeft="75dp"
+        android:paddingTop="25dp"
+        android:paddingRight="75dp"
+        android:paddingBottom="25dp"
+        android:text="Suivant"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/cr_signatures"
+        tools:layout_editor_absoluteX="279dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/guide_ctn">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/suivant"
+        <ImageView
+            android:id="@+id/imageView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ddd"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Suivant"
-            android:textColor="@android:color/white" />
-    </RelativeLayout>
+            android:layout_weight="2"
+            android:paddingLeft="100dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logohhs" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/motifhhs" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
