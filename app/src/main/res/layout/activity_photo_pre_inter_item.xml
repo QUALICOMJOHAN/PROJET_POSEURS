@@ -4,39 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     android:layout_marginStart="15dp"
     android:layout_marginTop="15dp"
-    android:layout_marginEnd="15dp"
-    tools:context=".photo_pre_inter_item">
+    android:layout_marginEnd="15dp">
 
-    <ImageView
-        android:id="@+id/item_photo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/motifhhs" />
+    <LinearLayout
+        android:id="@+id/items"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/item_text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="175dp"
-        android:maxWidth="350dp"
-        android:paddingTop="25dp"
-        android:text="Pannneaux solaires avant nettoyage, vue d’ensemble"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toRightOf="@+id/item_photo" />
+        <ImageView
+            android:id="@+id/item_photo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/motifhhs" />
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="25dp"
+            android:text="Pannneaux solaires avant nettoyage, vue d’ensemble Pannneaux solaires avant nettoyagePannneaux solaires avant nettoyage"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@+id/item_photo" />
+
+    </LinearLayout>
 
     <View
 
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
         android:background="?attr/colorButtonNormal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_photo" />
+        app:layout_constraintTop_toBottomOf="@+id/items" />
+
 
 </android.support.constraint.ConstraintLayout>
