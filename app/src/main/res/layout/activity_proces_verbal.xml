@@ -10,7 +10,7 @@
         android:id="@+id/label_auto_donnes"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Procès Verbal de fin de chantier"
         android:textAlignment="center"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -194,7 +194,7 @@
     <ScrollView
         android:id="@+id/détail_intervention_scroll"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="50dp"
@@ -243,15 +243,31 @@
             android:textColor="@android:color/white" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="100dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logohhs" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/motifhhs" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -58,51 +58,62 @@
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_height="275dp">
 
-            <TextureView
-                android:id="@+id/textureView3"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="#ddd" />
+                android:orientation="vertical">
 
-            <TextureView
-                android:id="@+id/textureView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="#ddd" />
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+                    <TextureView
+                        android:id="@+id/textureView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ddd" />
 
-            <TextureView
-                android:id="@+id/textureView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="#ddd" />
+                    <TextureView
+                        android:id="@+id/textureView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ddd" />
+                </LinearLayout>
 
-            <TextureView
-                android:id="@+id/textureView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="#ddd" />
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextureView
+                        android:id="@+id/textureView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ddd" />
+
+                    <TextureView
+                        android:id="@+id/textureView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ddd" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
 
     </LinearLayout>
@@ -119,8 +130,10 @@
         android:paddingBottom="25dp"
         android:text="Suivant"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/cr_signatures"
-        tools:layout_editor_absoluteX="279dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cr_signatures" />
 
     <LinearLayout
         android:layout_width="match_parent"

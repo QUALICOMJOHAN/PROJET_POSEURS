@@ -36,7 +36,20 @@
             android:id="@+id/label_qsfini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Felicitations ! L'intervention est terminée"
+            android:text="Fin d’intervention !"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+        <TextView
+            android:id="@+id/label_qsfini2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Merci pour votre travail et votre professionalisme !"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"

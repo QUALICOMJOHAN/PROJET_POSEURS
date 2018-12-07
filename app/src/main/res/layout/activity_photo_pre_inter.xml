@@ -76,9 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:background="#ddd"
-                android:paddingStart="50dp"
+                android:paddingStart="75dp"
                 android:paddingTop="25dp"
-                android:paddingEnd="50dp"
+                android:paddingEnd="75dp"
                 android:paddingBottom="25dp"
                 android:text="Suivant"
                 android:textColor="@android:color/white" />

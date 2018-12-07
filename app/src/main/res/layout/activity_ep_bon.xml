@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".demande_financement">
+    tools:context=".ep_bon">
 
     <TextView
-        android:id="@+id/label_sepa2"
+        android:id="@+id/label_ep2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingTop="25dp"
-        android:text="Demande de financement"
+        android:text="Enquête préliminaire"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -24,56 +24,68 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/label_sepa2">
+        android:paddingStart="75dp"
+        android:paddingEnd="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/label_photo_sepa"
+            android:id="@+id/termine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:text="Récupérez la demande de financement remplie et signée, puis prenez-la en photo"
+            android:paddingBottom="25dp"
+            android:text="C'est terminé !"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="100dp"
-            android:text="Exemple :"
-            android:textSize="18sp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView27"
-            android:layout_width="500dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="15dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/back" />
+            android:id="@+id/imageView26"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+        <TextView
+            android:id="@+id/tech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Le technicien va finaliser avec vous certains documents et vous allez profiter pleinement de votre nouveau confort !"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/redonner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="Vous pouvez redonner la tablette au technicien"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/commencer"
+            android:id="@+id/suivant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="50dp"
             android:background="#ddd"
-            android:paddingStart="50dp"
             android:paddingLeft="75dp"
             android:paddingTop="25dp"
-            android:paddingEnd="50dp"
             android:paddingRight="75dp"
             android:paddingBottom="25dp"
-            android:text="Commencer"
+            android:text="Suivant"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

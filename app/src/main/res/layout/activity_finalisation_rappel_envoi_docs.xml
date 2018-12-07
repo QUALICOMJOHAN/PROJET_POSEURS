@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="Veillez à envoyer les documents suivants au plus vite "
+            android:text="Bravo ! Il ne reste plus qu’à envoyer les documents papiers au plus vite"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"

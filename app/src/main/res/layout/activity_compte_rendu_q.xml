@@ -43,7 +43,11 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_pdc">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_pdc"
+        app:layout_constraintVertical_bias="0.241">
 
         <TextView
             android:id="@+id/label_photo_souvenir"
@@ -97,7 +101,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp">
 
@@ -154,23 +158,52 @@
             android:id="@+id/numq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:text="1/10"
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
+        <Button
+            android:id="@+id/suivant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="#ddd"
+            android:paddingLeft="75dp"
+            android:paddingTop="25dp"
+            android:paddingRight="75dp"
+            android:paddingBottom="25dp"
+            android:text="Suivant"
+            android:textColor="@android:color/white" />
+
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="100dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logohhs" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/motifhhs" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
