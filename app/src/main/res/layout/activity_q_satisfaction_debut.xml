@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".q_satisfaction_validation">
+    tools:context=".q_satisfaction_debut">
 
     <TextView
-        android:id="@+id/label_qst"
+        android:id="@+id/label_qst3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimaryDark"
@@ -33,10 +33,10 @@
         app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
         <TextView
-            android:id="@+id/merci"
+            android:id="@+id/felicitations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Merci beaucoup pour votre participation !"
+            android:text="Félicitations ! Vous êtes installé!"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="36sp"
@@ -53,12 +53,24 @@
             app:srcCompat="@drawable/termine" />
 
         <TextView
+            android:id="@+id/remerciements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nous tenons à vous remercier de votre confiance et nous souhaitons connaitre votre niveau de satisfaction."
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+        <TextView
             android:id="@+id/remerciements2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
-            android:text="Ces échanges sont très important pour nous, nous nous améliorons quotidiennement grâce à ces étapes de retour d’expériences clients."
+            android:text="Ci-après commencera une rapide enquête qualité. Soyez le plus franc possible, cela nous permet de garantir à tous nos clients les meilleurs services."
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
@@ -66,7 +78,7 @@
             app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <Button
-            android:id="@+id/modalites"
+            android:id="@+id/commencer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#ddd"
@@ -74,7 +86,7 @@
             android:paddingTop="25dp"
             android:paddingRight="75dp"
             android:paddingBottom="25dp"
-            android:text="Passer aux modalités"
+            android:text="Commencer"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
@@ -116,5 +128,4 @@
             app:srcCompat="@drawable/motifhhs" />
 
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

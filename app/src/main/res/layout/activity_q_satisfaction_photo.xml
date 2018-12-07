@@ -32,24 +32,44 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_qs3">
 
+        <ImageView
+            android:id="@+id/imageView29"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/back" />
+
         <TextView
             android:id="@+id/label_photo_souvenir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Vous pouvez prendre une photographie souvenir de l'intervention"
+            android:text="Voici une étape amusante ! Prenez la pose ! Prenez un selfie, c’est à dire une photographie souvenir de l’intervention. "
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-        <TextureView
-            android:id="@+id/textureView2"
+        <TextView
+            android:id="@+id/label_photo_souvenir2"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_marginTop="25dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Prenez un bel endroit de votre maison, mettez vous devant et photographiez vous avec votre nouvelle installation. Faites-vous aider par un technicien si l’angle n’est pas bon. "
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-        </TextureView>
+        <TextView
+            android:id="@+id/label_photo_souvenir3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Merci par avance pour ce bon moment :)"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
         <RelativeLayout
             android:id="@+id/suivant_ctn"
@@ -67,7 +87,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/pass"
+                    android:id="@+id/non"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/darker_gray"
@@ -75,7 +95,7 @@
                     android:paddingTop="25dp"
                     android:paddingRight="75dp"
                     android:paddingBottom="25dp"
-                    android:text="Passer"
+                    android:text="Non merci"
                     android:textColor="@android:color/white" />
 
                 <Button

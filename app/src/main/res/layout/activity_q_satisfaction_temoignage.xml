@@ -25,18 +25,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_qs2">
 
         <TextView
             android:id="@+id/label_temoignage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vous pouvez maintenant rédiger quelques phrases pour témoigner de votre expérience d’intervention Hitech Habitats Services"
+            android:text="Votre avis nous est précieux, il n’y a pas de meilleure satisfaction qu’un client heureux ! Pouvez-vous rédiger quelques phrases pour parler de votre expérience d’intervention Hitech Habitats Services"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/temoignage_ctn"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
             android:layout_marginTop="25dp">
 
             <android.support.design.widget.TextInputEditText
@@ -57,19 +57,32 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <RelativeLayout
-            android:id="@+id/suivant_ctn"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/satis_ctn"
-            tools:layout_editor_absoluteX="50dp">
+            android:layout_marginEnd="50dp"
+            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/valider"
-                android:layout_width="wrap_content"
+                android:id="@+id/non"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:paddingLeft="75dp"
+                android:paddingTop="25dp"
+                android:paddingRight="75dp"
+                android:paddingBottom="25dp"
+                android:text="Non merci"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/oui"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="#ddd"
                 android:paddingLeft="75dp"
                 android:paddingTop="25dp"
@@ -77,18 +90,35 @@
                 android:paddingBottom="25dp"
                 android:text="Valider"
                 android:textColor="@android:color/white" />
-        </RelativeLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="100dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logohhs" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/motifhhs" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
