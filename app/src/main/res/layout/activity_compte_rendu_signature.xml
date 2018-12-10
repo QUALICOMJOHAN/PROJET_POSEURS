@@ -36,13 +36,12 @@
                     android:textSize="30sp"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <com.github.gcacace.signaturepad.views.SignaturePad
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/textureView7"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:backgroundTint="#ddd" />
+                    android:background="@color/grisclair" />
 
                 <TextView
                     android:id="@+id/label_valid_inter2"
@@ -60,27 +59,25 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <com.github.gcacace.signaturepad.views.SignaturePad
-                        xmlns:android="http://schemas.android.com/apk/res/android"
+                    <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        app:penColor="@android:color/black"
                         android:id="@+id/textureView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#ddd" />
+                        android:background="@color/grisclair"
+                        app:penColor="@android:color/black" />
 
-                    <com.github.gcacace.signaturepad.views.SignaturePad
-                        xmlns:android="http://schemas.android.com/apk/res/android"
+                    <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        app:penColor="@android:color/black"
                         android:id="@+id/textureView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#ddd" />
+                        android:background="@color/grisclair"
+                        app:penColor="@android:color/black" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -89,27 +86,25 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <com.github.gcacace.signaturepad.views.SignaturePad
-                        xmlns:android="http://schemas.android.com/apk/res/android"
+                    <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        app:penColor="@android:color/black"
                         android:id="@+id/textureView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#ddd" />
+                        android:background="@color/grisclair"
+                        app:penColor="@android:color/black" />
 
-                    <com.github.gcacace.signaturepad.views.SignaturePad
-                        xmlns:android="http://schemas.android.com/apk/res/android"
+                    <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        app:penColor="@android:color/black"
                         android:id="@+id/textureView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#ddd" />
+                        android:background="@color/grisclair"
+                        app:penColor="@android:color/black" />
                 </LinearLayout>
 
                 <Button

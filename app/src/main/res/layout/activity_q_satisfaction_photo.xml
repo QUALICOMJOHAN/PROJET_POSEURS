@@ -6,6 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".q_satisfaction_photo">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="750dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_qs3">
+
+                <ImageView
+                    android:id="@+id/imageView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/label_photo_souvenir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Voici une étape amusante ! Prenez la pose ! Prenez un selfie, c’est à dire une photographie souvenir de l’intervention. "
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+                <TextView
+                    android:id="@+id/label_photo_souvenir2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Prenez un bel endroit de votre maison, mettez vous devant et photographiez vous avec votre nouvelle installation. Faites-vous aider par un technicien si l’angle n’est pas bon. "
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+                <TextView
+                    android:id="@+id/label_photo_souvenir3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Merci par avance pour ce bon moment :)"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+                <RelativeLayout
+                    android:id="@+id/suivant_ctn"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/satis_ctn"
+                    tools:layout_editor_absoluteX="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/darker_gray"
+                            android:paddingLeft="75dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="75dp"
+                            android:paddingBottom="25dp"
+                            android:text="Non merci"
+                            android:textColor="@android:color/white" />
+
+                        <Button
+                            android:id="@+id/suivant2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#ddd"
+                            android:paddingLeft="75dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="75dp"
+                            android:paddingBottom="25dp"
+                            android:text="Prendre une photo"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/label_qs3"
         android:layout_width="match_parent"
@@ -22,107 +154,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_qs3">
-
-        <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:srcCompat="@drawable/back" />
-
-        <TextView
-            android:id="@+id/label_photo_souvenir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Voici une étape amusante ! Prenez la pose ! Prenez un selfie, c’est à dire une photographie souvenir de l’intervention. "
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <TextView
-            android:id="@+id/label_photo_souvenir2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Prenez un bel endroit de votre maison, mettez vous devant et photographiez vous avec votre nouvelle installation. Faites-vous aider par un technicien si l’angle n’est pas bon. "
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <TextView
-            android:id="@+id/label_photo_souvenir3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Merci par avance pour ce bon moment :)"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <RelativeLayout
-            android:id="@+id/suivant_ctn"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/satis_ctn"
-            tools:layout_editor_absoluteX="50dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:paddingLeft="75dp"
-                    android:paddingTop="25dp"
-                    android:paddingRight="75dp"
-                    android:paddingBottom="25dp"
-                    android:text="Non merci"
-                    android:textColor="@android:color/white" />
-
-                <Button
-                    android:id="@+id/suivant2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#ddd"
-                    android:paddingLeft="75dp"
-                    android:paddingTop="25dp"
-                    android:paddingRight="75dp"
-                    android:paddingBottom="25dp"
-                    android:text="Prendre une photo"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/motifhhs"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

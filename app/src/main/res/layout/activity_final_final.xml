@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Qestionnaire de satisfaction terminé"
+        android:text="Finalisation d’intervention"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
