@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Photographies pré-intervention"
+        android:text="Photographies post-intervention"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -58,6 +58,7 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/liste_photos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/activity_photo_pre_inter_item" />

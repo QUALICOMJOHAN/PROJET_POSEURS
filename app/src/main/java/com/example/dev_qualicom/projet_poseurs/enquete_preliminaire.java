@@ -26,6 +26,7 @@ public class enquete_preliminaire extends AppCompatActivity {
     private Button non;
     private TextView question;
     private TextView numq;
+    private int error = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,9 +106,18 @@ public class enquete_preliminaire extends AppCompatActivity {
 
             for(Question q : tabq){
                 if(!q.isEqual()){
-                    Intent intent = new Intent(enquete_preliminaire.this, ep_mauvais.class);
-                    startActivity(intent);
+                    error += 1;
                 }
+            }
+
+            if(error == 0){
+                Intent intent = new Intent(enquete_preliminaire.this, ep_bon.class);
+                startActivity(intent);
+                finish();
+            }else{
+                Intent intent = new Intent(enquete_preliminaire.this, ep_mauvais.class);
+                startActivity(intent);
+                finish();
             }
 
         }else{

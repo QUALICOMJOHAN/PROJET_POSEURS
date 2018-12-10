@@ -20,8 +20,7 @@ public class validation_install extends AppCompatActivity {
         commencer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(validation_install.this, photo_pre_inter.class);
-                //i.putExtra("id_pose", id_pose);
+                Intent i = new Intent(validation_install.this, photo_pre_inter_avant.class);
                 startActivity(i);
             }
         });

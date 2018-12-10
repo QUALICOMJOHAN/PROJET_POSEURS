@@ -31,7 +31,7 @@ public class demande_intervention extends AppCompatActivity {
                         .setPositiveButton("OUI", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(demande_intervention.this, enquete_preliminaire.class);
+                                Intent i = new Intent(demande_intervention.this, donner_tab_client.class);
                                 i.putExtra("id_pose", id_pose);
                                 startActivity(i);
                             }

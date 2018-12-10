@@ -11,9 +11,9 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,16 +32,17 @@ public class photo_pre_inter extends AppCompatActivity {
     ArrayList<PhotoPre> photos = new ArrayList<PhotoPre>();
     RecyclerView recyclerView;
     LinearLayoutManager llm = new LinearLayoutManager(this);
-
+    int currenteSelected;
+    Button suivant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_pre_inter);
 
-        photos = initPhoto();
+        suivant = findViewById(R.id.suivant);
 
-        Log.e("TAG", String.valueOf(photos.size()));
+        photos = initPhoto();
 
         recyclerView = (RecyclerView) findViewById(R.id.liste_photos);
 
@@ -49,6 +50,14 @@ public class photo_pre_inter extends AppCompatActivity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
         recyclerView.setAdapter(docsAdapter);
+
+        suivant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(photo_pre_inter.this, guide_inter.class);
+                startActivity(next);
+            }
+        });
 
     }
 
@@ -64,6 +73,10 @@ public class photo_pre_inter extends AppCompatActivity {
                 Bitmap bitmap = MediaStore.Images.Media
                         .getBitmap(getContentResolver(), Uri.fromFile(file));
 
+                photos.get(currenteSelected).setFilePath(mCurrentPhotoPath);
+
+                View view = findViewById(currenteSelected);
+                mImageView = view.findViewById(R.id.item_photo);
                 setPic();
 
                 if (bitmap != null) {
@@ -72,14 +85,11 @@ public class photo_pre_inter extends AppCompatActivity {
             }
 
         } catch (Exception error) {
-            Log.i("TAG", "Bite6");
             error.printStackTrace();
         }
     }
 
     private void dispatchTakePictureIntent() {
-
-        Log.i("TAG", "Bite2");
 
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent
@@ -99,19 +109,16 @@ public class photo_pre_inter extends AppCompatActivity {
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
 
-                Log.i("TAG", "Bite3");
             }
         }
     }
 
     private File createImageFile() throws IOException {
 
-        Log.i("TAG", "Bite4");
-
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        String imageFileName = photos.get(currenteSelected).getPrefix_photo()+"_" + timeStamp + "_";
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/test");
         File image = File.createTempFile(
                 imageFileName,  /* prefix */
                 ".jpg",         /* suffix */
@@ -120,8 +127,6 @@ public class photo_pre_inter extends AppCompatActivity {
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
-
-        Log.i("TAG", "Bite5");
 
         return image;
     }
@@ -201,14 +206,17 @@ public class photo_pre_inter extends AppCompatActivity {
 
             }
 
+            this.itemView.setId(photos.indexOf(photo));
+            this.itemView.setOnClickListener(this);
+
         }
 
         @Override
         public void onClick(View view) {
 
-            /*Intent i = new Intent(planning.this, demande_intervention.class);
-            i.putExtra("id_pose", photos.get(view.getId()).getEquipe());
-            startActivity(i);*/
+            currenteSelected = view.getId();
+
+            dispatchTakePictureIntent();
 
         }
     }
@@ -217,19 +225,19 @@ public class photo_pre_inter extends AppCompatActivity {
 
         ArrayList<PhotoPre> result = new ArrayList<PhotoPre>();
 
-        PhotoPre photo = new PhotoPre("Photo Panneaux");
+        PhotoPre photo = new PhotoPre("Photo Panneaux Photo Panneaux Photo Panneaux Photo PanneauxPhoto Panneaux Photo PanneauxPhoto Panneaux", "Panneaux");
         result.add(photo);
-        photo = new PhotoPre("Photo Panneaux2");
+        photo = new PhotoPre("Photo Panneaux2", "Panneaux2");
         result.add(photo);
-        photo = new PhotoPre("Photo Maison");
+        photo = new PhotoPre("Photo Maison", "Maison");
         result.add(photo);
-        photo = new PhotoPre("Photo Ballon");
+        photo = new PhotoPre("Photo Ballon", "Ballon");
         result.add(photo);
-        photo = new PhotoPre("Photo Wendy");
+        photo = new PhotoPre("Photo Wendy", "Wendy");
         result.add(photo);
-        photo = new PhotoPre("Photo Coucou");
+        photo = new PhotoPre("Photo Coucou", "Coucou");
         result.add(photo);
-        photo = new PhotoPre("Photo Coca");
+        photo = new PhotoPre("Photo Coca", "Coca");
         result.add(photo);
 
         return result;
