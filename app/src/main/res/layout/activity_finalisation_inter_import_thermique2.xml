@@ -6,6 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".finalisation_inter_import_thermique2">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="750dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/label_sepa4">
+
+                <ImageView
+                    android:id="@+id/imageView28"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <TextView
+                    android:id="@+id/img_ther_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="Vos images thermiques ont bien été importées !"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+                <TextView
+                    android:id="@+id/nb_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="Nombre de photos importées :"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/suivant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="#ddd"
+                    android:paddingStart="50dp"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="50dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Suivant"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/label_sepa4"
         android:layout_width="match_parent"
@@ -22,85 +116,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/label_sepa4">
-
-        <ImageView
-            android:id="@+id/imageView28"
-            android:layout_width="200dp"
-            android:layout_height="300dp"
-            android:layout_marginBottom="25dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-        <TextView
-            android:id="@+id/img_ther_ok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:text="Vos images thermiques ont bien été importées !"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <TextView
-            android:id="@+id/nb_photos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="100dp"
-            android:text="Nombre de photos importées :"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/suivant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#ddd"
-            android:paddingStart="50dp"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingEnd="50dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Suivant"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="100dp"
-            android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
-
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

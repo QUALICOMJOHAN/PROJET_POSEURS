@@ -107,7 +107,7 @@
                     android:paddingTop="25dp"
                     android:paddingRight="75dp"
                     android:paddingBottom="25dp"
-                    android:text="Suivant"
+                    android:text="Prendre une photo"
                     android:textColor="@android:color/white" />
             </LinearLayout>
 

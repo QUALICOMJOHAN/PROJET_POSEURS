@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ep_bon">
 
-    <TextView
-        android:id="@+id/label_ep2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
-        android:paddingTop="25dp"
-        android:text="Enquête préliminaire"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -130,5 +114,21 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/label_ep2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="25dp"
+        android:text="Enquête préliminaire"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

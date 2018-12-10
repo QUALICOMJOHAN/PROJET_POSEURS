@@ -6,6 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".demande_financement">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="750dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/label_sepa2">
+
+                <TextView
+                    android:id="@+id/label_photo_sepa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="Récupérez la demande de financement remplie et signée, puis prenez-la en photo"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="Exemple :"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="500dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/back" />
+
+                <Button
+                    android:id="@+id/commencer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="#ddd"
+                    android:paddingStart="50dp"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="50dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Commencer"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/label_sepa2"
         android:layout_width="match_parent"
@@ -22,86 +118,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/label_sepa2">
-
-        <TextView
-            android:id="@+id/label_photo_sepa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp"
-            android:text="Récupérez la demande de financement remplie et signée, puis prenez-la en photo"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="100dp"
-            android:text="Exemple :"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/imageView27"
-            android:layout_width="500dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="15dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/back" />
-
-        <Button
-            android:id="@+id/commencer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#ddd"
-            android:paddingStart="50dp"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingEnd="50dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Commencer"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="100dp"
-            android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
-
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
