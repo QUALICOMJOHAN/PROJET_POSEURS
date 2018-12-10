@@ -22,98 +22,113 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingStart="75dp"
-        android:paddingEnd="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_planning">
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/termine"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="25dp"
-            android:text="C'est terminé !"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="36dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:orientation="vertical"
+            android:paddingTop="100dp">
 
-        <ImageView
-            android:id="@+id/imageView26"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="750dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="75dp"
+                android:paddingEnd="75dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
-        <TextView
-            android:id="@+id/tech"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Le technicien va finaliser avec vous certains documents et vous allez profiter pleinement de votre nouveau confort !"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="36dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/termine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="25dp"
+                    android:text="Bravo ! L’enquête préliminaire est terminée !"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="36dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/redonner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="15dp"
-            android:text="Vous pouvez redonner la tablette au technicien"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="36dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
 
-        <Button
-            android:id="@+id/suivant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="#ddd"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Suivant"
-            android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/tech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="La pose de votre matériel va maintenant commencer. Nous reviendrons vers vous une fois la pose terminée."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="36dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/redonner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Vous pouvez redonner la tablette au technicien"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="36dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+                <Button
+                    android:id="@+id/suivant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="#ddd"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Suivant"
+                    android:textColor="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="100dp"
-            android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
+            </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

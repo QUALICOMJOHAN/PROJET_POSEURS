@@ -32,25 +32,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_planning">
 
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/valider" />
+
         <TextView
             android:id="@+id/label_commencer_install"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vous pouvez commencer l'installation"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="Tout est ok ! Vous pouvez commencer l’installation"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/label_planning" />
-
-        <ImageView
-            android:id="@+id/check"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp"
-            app:srcCompat="@drawable/valider" />
 
         <Button
             android:id="@+id/commencer_inter"

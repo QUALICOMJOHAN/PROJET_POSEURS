@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".donner_tab_client">
+    tools:context=".proces_verbal_donner_tab">
 
     <TextView
-        android:id="@+id/label_di2"
+        android:id="@+id/label_di3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:paddingTop="25dp"
-        android:text="Demande d'intervention"
+        android:text="Procès Verbal de fin de chantier"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -44,8 +44,34 @@
             android:id="@+id/label_qsfini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="Donnez la tablette au client pour l’enquête préliminaire"
+            android:layout_marginBottom="25dp"
+            android:text="PV DE FIN DE CHANTIER"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/label_qsfini3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Remplissez et assistez jusqu’à la signature le client"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/label_qsfini4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Donnez la tablette au client"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -93,5 +119,4 @@
             app:srcCompat="@drawable/motifhhs" />
 
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

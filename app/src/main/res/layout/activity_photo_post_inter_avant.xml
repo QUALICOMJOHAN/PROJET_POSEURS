@@ -35,12 +35,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_di4">
 
+        <ImageView
+            android:id="@+id/check3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/valider" />
+
         <TextView
             android:id="@+id/label_photo_post"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="Prenez en photo les elements après l’installation"
+            android:layout_marginTop="25dp"
+            android:text="PHOTOS APRES INSTALLATION"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+        <TextView
+            android:id="@+id/label_photo_post2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Faites ressortir au mieux votre installation"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"

@@ -76,7 +76,8 @@
         <activity android:name=".finalisation_inter_import_thermique2" />
         <activity android:name=".autor_donnees" />
         <activity android:name=".q_satisfaction_debut" />
-        <activity android:name=".finalisation_inter_termine"></activity>
+        <activity android:name=".finalisation_inter_termine" />
+        <activity android:name=".proces_verbal_donner_tab"></activity>
     </application>
 
 </manifest>

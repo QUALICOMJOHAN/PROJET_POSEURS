@@ -35,12 +35,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_di4">
 
+        <ImageView
+            android:id="@+id/check4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/valider" />
+
         <TextView
             android:id="@+id/label_commencer_install"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="PROCHAINE ETAPE "
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+        <TextView
+            android:id="@+id/label_commencer_install2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:text="Vous allez remplir le compte rendu de fin de chantier"
+            android:text="Le compte rendu de fin de chantier"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+
+        <TextView
+            android:id="@+id/label_commencer_install3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="Soyez le plus précis possible SVP"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"

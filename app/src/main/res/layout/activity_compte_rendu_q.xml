@@ -22,188 +22,201 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/label_pdc"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:text="Points de contrôle"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_cr" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_pdc"
-        app:layout_constraintVertical_bias="0.241">
-
-        <TextView
-            android:id="@+id/label_photo_souvenir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Arrivée sur le chantier : contact client et présentation"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="150dp"
-            android:layout_marginBottom="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="100dp">
 
             <TextView
-                android:id="@+id/color"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="0.005"
-                android:background="@color/orangefonce" />
-
-            <TextView
-                android:id="@+id/legende"
-                android:layout_width="wrap_content"
+                android:id="@+id/label_pdc"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Responsable" />
-
-            <TextView
-                android:id="@+id/color2"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="0.005"
-                android:background="@color/colorPrimary" />
-
-            <TextView
-                android:id="@+id/legende2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Equipier" />
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp">
+                android:layout_margin="25dp"
+                android:text="Points de contrôle"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_cr" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
+                android:layout_height="675dp"
+                android:gravity="center"
                 android:orientation="vertical"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_photo_souvenir">
+                app:layout_constraintTop_toBottomOf="@+id/label_pdc"
+                app:layout_constraintVertical_bias="0.241">
 
-                <Button
-                    android:id="@+id/resp"
+                <TextView
+                    android:id="@+id/label_photo_souvenir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/orangefonce"
-                    android:text="Responsable"
-                    android:textColor="@android:color/white" />
+                    android:text="Arrivée sur le chantier : contact client et présentation"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
-                <Button
-                    android:id="@+id/assistant"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Assistant"
-                    android:textColor="@android:color/white" />
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/assistant2"
+                    <TextView
+                        android:id="@+id/color"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.005"
+                        android:background="@color/orangefonce" />
+
+                    <TextView
+                        android:id="@+id/legende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Responsable" />
+
+                    <TextView
+                        android:id="@+id/color2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.005"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/legende2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Equipier" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_photo_souvenir">
+
+                        <Button
+                            android:id="@+id/resp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/orangefonce"
+                            android:text="Responsable"
+                            android:textColor="@android:color/white" />
+
+                        <Button
+                            android:id="@+id/assistant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Assistant"
+                            android:textColor="@android:color/white" />
+
+                        <Button
+                            android:id="@+id/assistant2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Assistant"
+                            android:textColor="@android:color/white" />
+
+                        <Button
+                            android:id="@+id/assistant3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Assistant"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/numq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Assistant"
-                    android:textColor="@android:color/white" />
+                    android:text="1/10"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_planning" />
 
                 <Button
-                    android:id="@+id/assistant3"
-                    android:layout_width="match_parent"
+                    android:id="@+id/suivant"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Assistant"
+                    android:layout_marginTop="25dp"
+                    android:background="#ddd"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Suivant"
                     android:textColor="@android:color/white" />
+
             </LinearLayout>
-        </ScrollView>
 
-        <TextView
-            android:id="@+id/numq"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1/10"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_planning" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/suivant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#ddd"
-            android:paddingLeft="75dp"
-            android:paddingTop="25dp"
-            android:paddingRight="75dp"
-            android:paddingBottom="25dp"
-            android:text="Suivant"
-            android:textColor="@android:color/white" />
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+            </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="100dp"
-            android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
-
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
-
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
