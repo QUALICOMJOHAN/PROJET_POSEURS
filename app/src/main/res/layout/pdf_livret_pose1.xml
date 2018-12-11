@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210mm"
+    android:layout_height="297mm">
+
+    <ImageView
+        android:id="@+id/logohhs"
+        android:layout_width="210mm"
+        android:layout_height="23mm"
+        android:layout_marginStart="20mm"
+        android:layout_marginEnd="20mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logohhs" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_marginBottom="5mm"
+        android:text="AUTORISATION"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/logohhs" />
+
+    <View
+
+        android:id="@+id/sep"
+        android:layout_width="170mm"
+        android:layout_height="3dp"
+        android:layout_marginTop="5mm"
+        android:background="@color/colorPrimary"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <LinearLayout
+        android:id="@+id/label_soussigne"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20mm"
+        android:layout_marginTop="5mm"
+        android:layout_marginEnd="20mm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep">
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="30mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Je soussigné(e)"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/soussigne"
+            android:layout_width="145mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="....................................................................................................................."
+            android:paddingLeft="2mm"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/label_demeurant"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20mm"
+        android:layout_marginTop="5mm"
+        android:layout_marginEnd="20mm"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_soussigne">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="30mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Demeurant"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/demeurant"
+            android:layout_width="145mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint=".........................................................................................................................."
+            android:paddingLeft="2mm"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/label_autor"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20mm"
+        android:layout_marginEnd="20mm"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_demeurant">
+
+        <TextView
+            android:id="@+id/ml"
+            android:layout_width="170mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:text="ai accepté que la toiture de ma maison soit prise en photo par la société Hi-Tech Habitats Services."
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/ml2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:text="Je vous confirme par la présente mon autorisation pour l’utilisation des images par la Société Hi-Tech Habitats Services, à titre gracieux. "
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/ml3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:text="L’autorisation ainsi donnée couvre les droits qui, de manière directe ou indirecte, sont nécessaires aux exploitations, divulgations, reproductions, et diffusions à des fins commerciales et publicitaires, en interne ou en réseau, sur tous supports et en tous lieux.
+"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/ml4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:text="Cette autorisation est donnée gracieusement à la Société Hi-Tech Habitats Services pour toute utilisation faite pendant une durée de 10 années quelque soit le nombre des reproductions."
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/label_jai_signe"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20mm"
+        android:layout_marginTop="5mm"
+        android:layout_marginEnd="20mm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_autor">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="50mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="En foi de quoi j’ai signé à"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/lieu_sign"
+            android:layout_width="145mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint=".............................................................................................................."
+            android:paddingLeft="2mm"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/label_le"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20mm"
+        android:layout_marginTop="5mm"
+        android:layout_marginEnd="20mm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_jai_signe">
+
+        <TextView
+            android:id="@+id/textviewle"
+            android:layout_width="10mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Le"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/date_sign"
+            android:layout_width="145mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="....................................................................................................................."
+            android:paddingLeft="2mm"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/signature"
+        android:layout_width="170mm"
+        android:layout_height="40mm"
+        android:layout_marginStart="20mm"
+        android:layout_marginTop="5mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_le"
+        app:srcCompat="@drawable/border_planning" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="OBSERVATIONS"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/signature" />
+
+    <View
+
+        android:id="@+id/sep2"
+        android:layout_width="170mm"
+        android:layout_height="3dp"
+        android:layout_marginTop="5mm"
+        android:background="@color/colorPrimary"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <LinearLayout
+        android:id="@+id/label_obs"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep2">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
