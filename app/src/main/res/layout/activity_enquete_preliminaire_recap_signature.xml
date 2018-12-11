@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".enquete_preliminaire_recap_signature">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/label_auto_donnes">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_recap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingStart="50dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="50dp"
+                android:text="Récapitulatif"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_auto_donnes" />
+
+            <LinearLayout
+                android:id="@+id/nom_date_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/nom_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Nom du client :	"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text=" "
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Date de pose :	"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text=" "
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/nom_equipe_ctn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingStart="100dp"
+            android:paddingEnd="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+            <TextView
+                android:id="@+id/nom_equipe_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Nom équipe de pose:	"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/nom_equipe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center_vertical"
+                android:text=" "
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+            <View
+
+                android:id="@+id/sep3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nom_equipe_ctn" />
+
+
+            <LinearLayout
+                android:id="@+id/q1_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Etes-vous satisfait de notre technicien conseil Mr...................... ?	"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/q2_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous parfaitement compris ses explications ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/q3_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous compris l’ensemble de votre bon de commande ?	"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q4_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous des questions sur votre offre de financement ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q5_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous en votre possession votre double du bon de commande ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/q6_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous en votre possession le double de votre dossier de financement ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q7_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous en votre possession votre extension de garantie ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q8_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous en votre possession votre contrat d’entretien avec le montant annuel inscrit ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q9_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Avez-vous d’autres questions ?"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/q10_ctn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+                <TextView
+                    android:id="@+id/q10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Pouvons-nous commencer la prestation technique et l’installation de votre matériel conformément à votre bon de commande ?	"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/oui10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="OUI"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/non10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.001"
+                    android:text="NON"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/signature_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingStart="50dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="50dp"
+                android:text="Signature"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctn_obs" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="100dp"
+                android:text='Précédée de la mention "Bon pour accord"' />
+
+            <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/signature"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/grisclair"
+                app:penColor="@android:color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/détail_intervention_scroll">
+
+                <Button
+                    android:id="@+id/suivant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ddd"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="75dp"
+                    android:paddingBottom="25dp"
+                    android:text="Suivant"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/ep_recap"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="25dp"
+        android:text="Enquête préliminaire"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

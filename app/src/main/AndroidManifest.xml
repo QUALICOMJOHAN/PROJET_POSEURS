@@ -80,6 +80,8 @@
         <activity android:name=".finalisation_inter_import_thermique2" />
         <activity android:name=".autor_donnees" />
         <activity android:name=".q_satisfaction_debut" />
+        <activity android:name=".enquete_preliminaire_recap_signature" />
+        <activity android:name=".enquete_preliminaire_apres_num"></activity>
     </application>
 
 </manifest>
