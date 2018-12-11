@@ -79,7 +79,7 @@ public class proces_verbal_signature extends AppCompatActivity {
                 doc.setRenderWidth(210);
                 doc.setRenderHeight(297);
                 doc.setOrientation(PdfDocument.A4_MODE.PORTRAIT);
-                doc.setFileName("test");
+                doc.setFileName("Livret_installation");
                 doc.setSaveDirectory(proces_verbal_signature.this.getExternalFilesDir(null));
                 doc.setInflateOnMainThread(false);
                 doc.setListener(new PdfDocument.Callback() {
