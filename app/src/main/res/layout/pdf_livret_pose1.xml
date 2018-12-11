@@ -213,7 +213,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/signature"
+        android:id="@+id/signature_img"
         android:layout_width="170mm"
         android:layout_height="40mm"
         android:layout_marginStart="20mm"

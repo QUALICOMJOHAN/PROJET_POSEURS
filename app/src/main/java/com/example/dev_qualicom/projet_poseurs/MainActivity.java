@@ -19,10 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.hendrix.pdfmyxml.PdfDocument;
-import com.hendrix.pdfmyxml.viewRenderer.AbstractViewRenderer;
 
-import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -67,43 +64,6 @@ public class MainActivity extends AppCompatActivity {
 //        startActivityForResult(intent, 2);
 
         checkPermissions();
-
-        AbstractViewRenderer page = new AbstractViewRenderer(this, R.layout.pdf_livret_install_1) {
-            @Override
-            protected void initView(View view) {
-                TextView tv_hello = (TextView)view.findViewById(R.id.soussigne);
-                tv_hello.setText("Je suis content e suis content");
-            }
-        };
-
-        PdfDocument doc            = new PdfDocument(this);
-
-// add as many pages as you have
-        doc.addPage(page);
-
-        doc.setRenderWidth(210);
-        doc.setRenderHeight(297);
-        doc.setOrientation(PdfDocument.A4_MODE.PORTRAIT);
-        doc.setFileName("test");
-        doc.setSaveDirectory(this.getExternalFilesDir(null));
-        doc.setInflateOnMainThread(false);
-        doc.setListener(new PdfDocument.Callback() {
-            @Override
-            public void onComplete(File file) {
-                Log.i(PdfDocument.TAG_PDF_MY_XML, "Complete");
-            }
-
-            @Override
-            public void onError(Exception e) {
-                Log.i(PdfDocument.TAG_PDF_MY_XML, "Error");
-            }
-        });
-
-        doc.createPdf(this);
-
-// you can reuse the bitmap if you want
-        page.setReuseBitmap(true);
-
 
         login = (TextView) findViewById(R.id.identifiant);
         pass = (TextView) findViewById(R.id.mdp);
