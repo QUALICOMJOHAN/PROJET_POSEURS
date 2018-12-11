@@ -2,6 +2,7 @@ package com.example.dev_qualicom.projet_poseurs;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -121,6 +122,13 @@ public class enquete_preliminaire extends AppCompatActivity {
             }
 
         }else{
+            if(tabq.get(currentq-1).isAttendu()){
+                oui.setBackgroundColor(Color.parseColor("#669900"));
+                non.setBackgroundColor(Color.parseColor("#cc0000"));
+            }else{
+                oui.setBackgroundColor(Color.parseColor("#cc0000"));
+                non.setBackgroundColor(Color.parseColor("#669900"));
+            }
             question.setText(tabq.get(currentq-1).getQuestion());
             numq.setText(tabq.get(currentq-1).getNum()+"/10");
         }

@@ -2,14 +2,13 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="1500px"
-    android:layout_height="2115px"
-    >
+    android:layout_width="210mm"
+    android:layout_height="297mm">
 
     <ImageView
         android:id="@+id/logohhs"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
+        android:layout_width="210mm"
+        android:layout_height="23mm"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logohhs" />
 
@@ -47,5 +46,5 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
 
