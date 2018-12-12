@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210mm"
+    android:layout_height="297mm">
+
+    <ImageView
+        android:id="@+id/logohhs3"
+        android:layout_width="210mm"
+        android:layout_height="23mm"
+        android:layout_marginTop="5mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logohhs" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:text="PROCES VERBAL DE FIN DE CHANTIER"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logohhs3" />
+
+    <View
+
+        android:id="@+id/sep7"
+        android:layout_width="170mm"
+        android:layout_height="3dp"
+        android:layout_marginTop="5mm"
+        android:background="@color/colorPrimary"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+    <LinearLayout
+        android:id="@+id/affaire_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintTop_toBottomOf="@+id/sep7">
+
+        <TextView
+            android:id="@+id/affaire_label"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Affaire :"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/affaire"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text=" 0 "
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nom_prenom_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintTop_toBottomOf="@+id/affaire_ctn">
+
+        <TextView
+            android:id="@+id/nom_prenom_label"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Noms et Prénoms"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nom_prenom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="Nom 1 Prénom 1 Prénom 2"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adresse_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintTop_toBottomOf="@+id/nom_prenom_ctn">
+
+        <TextView
+            android:id="@+id/adresse_label"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Adresse d'installation"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="1 Rue de la rue du village"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ville_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adresse_ctn">
+
+        <TextView
+            android:id="@+id/ville_label"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Ville"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ville1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="Village"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cp_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintTop_toBottomOf="@+id/ville_ctn">
+
+        <TextView
+            android:id="@+id/cp_label"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Code Postal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="00000"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entete_tab"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10mm"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/cp_ctn">
+
+        <TextView
+            android:id="@+id/pdc"
+            android:layout_width="80mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingRight="1mm"
+            android:text="Points de contrôle"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom 2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/p3"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom 3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/p4"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom 4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/p5"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom 5"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/q1_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/entete_tab">
+
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="80mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingTop="1mm"
+            android:paddingRight="1mm"
+            android:paddingBottom="1mm"
+            android:text="Arrivée sur le chantier : contact client et présentation"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q1r"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q1a"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q1a2"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q1a3"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q1a4"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/q2_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/q1_ctn">
+
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="80mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingTop="1mm"
+            android:paddingRight="1mm"
+            android:paddingBottom="1mm"
+            android:text="Prise d'une photo avant nettoyage des panneaux solaires"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q2r"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q2a"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q2a2"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q2a3"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q2a4"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/q3_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/q2_ctn">
+
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="80mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingTop="1mm"
+            android:paddingRight="1mm"
+            android:paddingBottom="1mm"
+            android:text="Prendre une photo d'ensemble coffret DC, AC, onduleur avant/après"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q3r"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q3a"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q3a2"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q3a3"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q3a4"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/q4_ctn"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3_ctn">
+
+        <TextView
+            android:id="@+id/q4"
+            android:layout_width="80mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingTop="1mm"
+            android:paddingRight="1mm"
+            android:paddingBottom="1mm"
+            android:text="Contrôle périphérique de l'installation existante rive faitage égout"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q4r"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q4a"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q4a2"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q4a3"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/q4a4"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:paddingTop="1mm"
+            android:paddingBottom="1mm"
+            android:text="X"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
