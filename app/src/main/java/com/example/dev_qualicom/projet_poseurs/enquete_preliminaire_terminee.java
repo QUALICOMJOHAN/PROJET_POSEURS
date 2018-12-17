@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class enquete_preliminaire_terminee extends AppCompatActivity {
 
     Button suivant;
+    ArrayList<Question> objects = new ArrayList<Question>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +19,17 @@ public class enquete_preliminaire_terminee extends AppCompatActivity {
         setContentView(R.layout.activity_enquete_preliminaire_terminee);
 
         suivant = (Button) findViewById(R.id.suivant);
-        //id_pose = getIntent().getStringExtra("id_pose");
+        Bundle extra = getIntent().getBundleExtra("extra");
+        objects = (ArrayList<Question>) extra.getSerializable("objects");
 
         suivant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(enquete_preliminaire_terminee.this, validation_install.class);
+                Intent i = new Intent(enquete_preliminaire_terminee.this, enquete_preliminaire_recap_signature.class);
+                Bundle extra = new Bundle();
+                extra.putSerializable("objects", objects);
+                i.putExtra("extra", extra);
                 startActivity(i);
                 finish();
 

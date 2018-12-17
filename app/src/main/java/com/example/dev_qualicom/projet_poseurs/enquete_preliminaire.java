@@ -112,11 +112,18 @@ public class enquete_preliminaire extends AppCompatActivity {
             }
 
             if(error == 0){
-                Intent intent = new Intent(enquete_preliminaire.this, ep_bon.class);
+                Intent intent = new Intent(enquete_preliminaire.this, enquete_preliminaire_recap_signature.class);
+                Bundle extra = new Bundle();
+                extra.putSerializable("objects", tabq);
+                intent.putExtra("extra", extra);
                 startActivity(intent);
                 finish();
             }else{
                 Intent intent = new Intent(enquete_preliminaire.this, ep_mauvais.class);
+                startActivity(intent);
+                Bundle extra = new Bundle();
+                extra.putSerializable("objects", tabq);
+                intent.putExtra("extra", extra);
                 startActivity(intent);
                 finish();
             }
