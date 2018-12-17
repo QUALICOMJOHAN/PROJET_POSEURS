@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210mm"
+    android:layout_height="297mm">
+
+    <ImageView
+        android:id="@+id/logohhs3"
+        android:layout_width="210mm"
+        android:layout_height="23mm"
+        android:layout_marginTop="5mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logohhs" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:text="Fiche de non-conformité"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logohhs3" />
+
+    <View
+
+        android:id="@+id/sep7"
+        android:layout_width="170mm"
+        android:layout_height="3dp"
+        android:layout_marginTop="5mm"
+        android:background="@color/colorPrimary"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Nature de la non-conformité"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep7" />
+
+
+    <LinearLayout
+        android:id="@+id/nc1"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="100mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Ne respecte pas les normes règlementaires"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nc2"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/nc1">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="100mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Non satisfait"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nc3"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintTop_toBottomOf="@+id/nc2">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="100mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Ne respecte pas le cahier des charges Hi_-tech Habitats Services"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nc_rel"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/nc3">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:text="Non-conformité relevée par :"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+
+        <TextView
+            android:id="@+id/nom_rel"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nc_chantier"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/nc_rel">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:text="Chantier concerné :"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+
+        <TextView
+            android:id="@+id/chantier"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Description de la non-conformité :"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nc_chantier" />
+
+    <EditText
+        android:id="@+id/desc_nc_input"
+        android:layout_width="170mm"
+        android:layout_height="30mm"
+        android:layout_marginTop="2mm"
+        android:background="@drawable/border_planning"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+
+    <TextView
+        android:id="@+id/csq"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Conséquences de la non-conformité :"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_nc_input" />
+
+    <EditText
+        android:id="@+id/csq_nc_input"
+        android:layout_width="170mm"
+        android:layout_height="30mm"
+        android:layout_marginTop="2mm"
+        android:background="@drawable/border_planning"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/csq" />
+
+
+    <LinearLayout
+        android:id="@+id/date_c"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/csq_nc_input">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:text="Date du contrôle"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="210mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5mm"
+            android:layout_weight="1"
+            android:paddingStart="20mm"
+            android:paddingEnd="20mm"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep7" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="Si plusieurs jours d'intervention, veuillez indiquer les dates."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_c" />
+
+    <TextView
+        android:id="@+id/sign_resp"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Signature Responsable"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="170mm"
+        android:layout_height="30mm"
+        android:layout_marginTop="2mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_resp"
+        app:srcCompat="@drawable/border_planning" />
+
+
+    <TextView
+        android:id="@+id/sign_assist"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5mm"
+        android:layout_weight="1"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Signature Responsable"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="170mm"
+        android:layout_height="30mm"
+        android:layout_marginTop="2mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_assist"
+        app:srcCompat="@drawable/border_planning" />
+
+
+</android.support.constraint.ConstraintLayout>

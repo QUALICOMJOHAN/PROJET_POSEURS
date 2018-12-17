@@ -130,4 +130,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+    <ImageView
+        android:id="@+id/retour_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/retour" />
+
+
 </android.support.constraint.ConstraintLayout>

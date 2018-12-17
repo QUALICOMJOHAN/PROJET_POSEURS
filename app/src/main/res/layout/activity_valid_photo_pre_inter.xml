@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".valid_photo_pre_inter">
 
-    <TextView
-        android:id="@+id/label_recap"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimary"
-        android:paddingTop="25dp"
-        android:text="Récapitulatif photographies pré-intervention"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -197,18 +181,60 @@
                     android:textColor="@android:color/white" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="100dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@drawable/motifhhs"
-                android:elevation="1dp"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-            </RelativeLayout>
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="100dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/logohhs" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/motifhhs" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/label_recap"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:paddingTop="25dp"
+        android:text="Récapitulatif photographies pré-intervention"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/retour_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/retour" />
 
 </android.support.constraint.ConstraintLayout>
