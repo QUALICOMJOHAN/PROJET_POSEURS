@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Intent i = new Intent(MainActivity.this, finalisation_inter_import_thermique.class);
-        //startActivity(i);
+        Intent i = new Intent(MainActivity.this, finalisation_inter_import_thermique.class);
+        startActivity(i);
 
 //        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 //        intent.setType("file/*");

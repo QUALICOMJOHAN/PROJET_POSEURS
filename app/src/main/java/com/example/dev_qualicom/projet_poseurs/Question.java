@@ -1,6 +1,8 @@
 package com.example.dev_qualicom.projet_poseurs;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
 
     private int num;
     private String question;

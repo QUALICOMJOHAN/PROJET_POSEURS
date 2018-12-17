@@ -148,6 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.001"
+                    android:clickable="false"
                     android:text="OUI"
                     android:textSize="14sp" />
 
@@ -156,6 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.001"
+                    android:clickable="false"
                     android:text="NON"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -184,6 +186,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.001"
+                    android:clickable="false"
                     android:text="OUI"
                     android:textSize="14sp" />
 
@@ -220,6 +223,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.001"
+                    android:clickable="false"
                     android:text="OUI"
                     android:textSize="14sp" />
 
@@ -523,7 +527,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="100dp"
                 android:background="@color/grisclair"
-                app:penColor="@android:color/black" />
+                app:penColor="@android:color/black"
+                app:penMaxWidth="1dp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
