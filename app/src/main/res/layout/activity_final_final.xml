@@ -71,10 +71,10 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="300dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
-            app:srcCompat="@drawable/termine" />
+            app:srcCompat="@drawable/valid_install" />
 
         <Button
             android:id="@+id/terminer"

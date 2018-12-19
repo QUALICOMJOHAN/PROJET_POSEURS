@@ -28,7 +28,7 @@
                     android:layout_width="200dp"
                     android:layout_height="300dp"
                     android:layout_marginBottom="25dp"
-                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+                    app:srcCompat="@drawable/photo_pre" />
 
                 <TextView
                     android:id="@+id/img_ther_ok"
@@ -52,6 +52,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="100dp"
                     android:text="Nombre de photos importées :"
+                    android:textAlignment="center"
                     android:textSize="18sp" />
 
                 <Button

@@ -60,7 +60,7 @@
             android:layout_height="150dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
-            app:srcCompat="@drawable/termine" />
+            app:srcCompat="@drawable/q_satisfaction_termine" />
 
         <TextView
             android:id="@+id/remerciements2"

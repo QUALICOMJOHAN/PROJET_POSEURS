@@ -41,16 +41,16 @@
                 <ImageView
                     android:id="@+id/imageView16"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="150dp"
                     android:layout_marginTop="25dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+                    app:srcCompat="@drawable/ep_terminee" />
 
                 <TextView
                     android:id="@+id/label_livret2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="25dp"
                     android:text="Le technicien va finaliser avec vous certains documents et vous allez profiter pleinement de votre nouveau confort !"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"

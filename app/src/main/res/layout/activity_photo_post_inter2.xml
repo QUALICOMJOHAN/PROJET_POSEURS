@@ -35,14 +35,14 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <TextureView
+            <ImageView
                 android:id="@+id/camera_preview"
                 android:layout_width="match_parent"
                 android:layout_height="550dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp">
 
-            </TextureView>
+            </ImageView>
 
             <LinearLayout
                 android:layout_width="match_parent"

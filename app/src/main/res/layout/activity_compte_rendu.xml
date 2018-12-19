@@ -49,9 +49,9 @@
         <ImageView
             android:id="@+id/check4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_marginBottom="25dp"
-            app:srcCompat="@drawable/valider" />
+            app:srcCompat="@drawable/compte_rendu" />
 
         <TextView
             android:id="@+id/label_commencer_install"

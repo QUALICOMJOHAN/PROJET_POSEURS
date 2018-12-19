@@ -38,8 +38,8 @@
         <ImageView
             android:id="@+id/check2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/valider" />
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/photo_pre" />
 
         <TextView
             android:id="@+id/label_commencer_install"

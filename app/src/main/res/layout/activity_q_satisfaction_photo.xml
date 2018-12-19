@@ -29,8 +29,8 @@
                 <ImageView
                     android:id="@+id/imageView29"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:srcCompat="@drawable/back" />
+                    android:layout_height="250dp"
+                    app:srcCompat="@drawable/q_satisfaction_photo" />
 
                 <TextView
                     android:id="@+id/label_photo_souvenir"
