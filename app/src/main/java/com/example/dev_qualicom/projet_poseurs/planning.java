@@ -207,6 +207,9 @@ public class planning extends AppCompatActivity {
         public void onClick(View view) {
 
             Intent i = new Intent(planning.this, demande_intervention.class);
+
+            SingletonPose.getInstance().pose = poses.get(view.getId());
+
             i.putExtra("id_pose", poses.get(view.getId()).getEquipe());
             startActivity(i);
 

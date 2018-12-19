@@ -19,9 +19,7 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class photo_pre_inter extends AppCompatActivity {
 
@@ -40,9 +38,15 @@ public class photo_pre_inter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_pre_inter);
 
-        suivant = findViewById(R.id.suivant);
-
         photos = initPhoto();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            int id = extras.getInt("id");
+            currenteSelected = id;
+            dispatchTakePictureIntent();
+        }
+        suivant = findViewById(R.id.suivant);
 
         recyclerView = (RecyclerView) findViewById(R.id.liste_photos);
 
@@ -116,14 +120,7 @@ public class photo_pre_inter extends AppCompatActivity {
     private File createImageFile() throws IOException {
 
         // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = photos.get(currenteSelected).getPrefix_photo()+"_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/test");
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
+        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_test"+".jpg");
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
@@ -197,10 +194,11 @@ public class photo_pre_inter extends AppCompatActivity {
 
             title.setText(photo.getTitre());
 
-            File imgFile = new File(photo.getFilePath());
+            File imgFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
 
             if(imgFile.exists()){
 
+                photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
                 Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
                 imageView.setImageBitmap(myBitmap);
 
@@ -214,9 +212,16 @@ public class photo_pre_inter extends AppCompatActivity {
         @Override
         public void onClick(View view) {
 
-            currenteSelected = view.getId();
-
-            dispatchTakePictureIntent();
+            if(!photos.get(view.getId()).getFilePath().equals("")){
+                Intent intent = new Intent(photo_pre_inter.this, photo_pre_inter_2.class);
+                intent.putExtra("id", view.getId());
+                intent.putExtra("photo", photos.get(view.getId()).getFilePath());
+                startActivity(intent);
+                finish();
+            }else{
+                currenteSelected = view.getId();
+                dispatchTakePictureIntent();
+            }
 
         }
     }
@@ -225,7 +230,7 @@ public class photo_pre_inter extends AppCompatActivity {
 
         ArrayList<PhotoPre> result = new ArrayList<PhotoPre>();
 
-        PhotoPre photo = new PhotoPre("Photo Panneaux Photo Panneaux Photo Panneaux Photo PanneauxPhoto Panneaux Photo PanneauxPhoto Panneaux", "Panneaux");
+        PhotoPre photo = new PhotoPre("Photo Panneaux", "Panneaux");
         result.add(photo);
         photo = new PhotoPre("Photo Panneaux2", "Panneaux2");
         result.add(photo);
@@ -233,11 +238,11 @@ public class photo_pre_inter extends AppCompatActivity {
         result.add(photo);
         photo = new PhotoPre("Photo Ballon", "Ballon");
         result.add(photo);
-        photo = new PhotoPre("Photo Wendy", "Wendy");
+        photo = new PhotoPre("Photo Ballon2", "Ballon2");
         result.add(photo);
-        photo = new PhotoPre("Photo Coucou", "Coucou");
+        photo = new PhotoPre("Photo Maison2", "Maison2");
         result.add(photo);
-        photo = new PhotoPre("Photo Coca", "Coca");
+        photo = new PhotoPre("Photo Panneaux3", "Panneaux3");
         result.add(photo);
 
         return result;

@@ -66,6 +66,9 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
 
                     useImage(mImageUri, sign);
 
+                    Intent next = new Intent(finalisation_inter_import_thermique.this, finalisation_inter_import_thermique2.class);
+                    startActivity(next);
+
                 } else {
                     if (data.getClipData() != null) {
                         ClipData mClipData = data.getClipData();
@@ -77,6 +80,8 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
                             String sign = createStringPathFile("recap_"+i);
                             useImage(uri, sign);
                         }
+                        Intent next = new Intent(finalisation_inter_import_thermique.this, finalisation_inter_import_thermique2.class);
+                        startActivity(next);
                     }
                 }
             } else {
@@ -87,9 +92,6 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
             Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG)
                     .show();
         }
-
-        /*Intent next = new Intent(finalisation_inter_import_thermique.this, finalisation_inter_import_thermique2.class);
-        startActivity(next);*/
     }
 
     void useImage(Uri uri, String sign) throws IOException {
