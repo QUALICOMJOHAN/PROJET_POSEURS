@@ -161,7 +161,7 @@
         android:id="@+id/label_cr"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:paddingTop="25dp"
         android:text="Compte rendu d'intervention"
         android:textAlignment="center"
