@@ -29,7 +29,7 @@
                     android:id="@+id/label_livret"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Vous recevrez de la part de notre technicien ou par voie postale notre livret client"
+                    android:text="Demandez votre livret client auprès de l'équipe de pose"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="36sp"

@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-                    android:text="Votre certification de remise à niveau vous sera envoyée sous 15 jours. "
+                    android:text="Vous recevrez votre facture et votre certificat de remise à niveau sous 15 jours"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="36sp"
