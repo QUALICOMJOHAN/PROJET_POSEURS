@@ -13,8 +13,6 @@ import android.widget.Button;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class sepa_photo extends AppCompatActivity {
 
@@ -25,6 +23,11 @@ public class sepa_photo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_sepa_photo);
 
         commencer = (Button) findViewById(R.id.commencer);
@@ -89,15 +92,7 @@ public class sepa_photo extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
 
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "SEPA_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/test");
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
+        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/documents")+"/SEPA.jpg");
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();

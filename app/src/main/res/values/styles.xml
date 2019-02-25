@@ -6,6 +6,21 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="orangefonce">@color/orangefonce</item>
+        <item name="grisclair">@color/grisclair</item>
+        <item name="motifhhs">@drawable/motifhhs</item>
+        <item name="logohhs">@drawable/logohhs</item>
+    </style>
+
+    <style name="AppTheme.Ew" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ewcolorPrimary</item>
+        <item name="colorPrimaryDark">@color/ewcolorPrimaryDark</item>
+        <item name="colorAccent">@color/ewcolorAccent</item>
+        <item name="orangefonce">@color/eworangefonce</item>
+        <item name="grisclair">@color/ewgrisclair</item>
+        <item name="motifhhs">@drawable/motifew</item>
+        <item name="logohhs">@drawable/logoew</item>
     </style>
 
 </resources>

@@ -13,6 +13,11 @@ public class proces_verbal_donner_tab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_proces_verbal_donner_tab);
 
         next = (Button) findViewById(R.id.btn_commencer_inter);

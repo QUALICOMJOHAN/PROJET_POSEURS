@@ -33,7 +33,7 @@
                     android:layout_marginTop="50dp"
                     android:text="Bravo ! Il ne reste plus qu’à envoyer les documents papiers au plus vite"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="?attr/colorPrimary"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -46,63 +46,11 @@
                     android:layout_marginBottom="25dp">
 
                     <LinearLayout
+                        android:id="@+id/galerie"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/imageView16"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-                        <ImageView
-                            android:id="@+id/imageView17"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-                        <ImageView
-                            android:id="@+id/imageView18"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-                        <ImageView
-                            android:id="@+id/imageView19"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-                        <ImageView
-                            android:id="@+id/imageView20"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-                        <ImageView
-                            android:id="@+id/imageView21"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@android:drawable/sym_def_app_icon" />
                     </LinearLayout>
                 </HorizontalScrollView>
 
@@ -111,55 +59,6 @@
                     android:layout_height="150dp"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </LinearLayout>
                 </LinearLayout>
 
                 <Button
@@ -195,14 +94,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
 
@@ -213,7 +112,7 @@
         android:id="@+id/label_fi"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="?attr/colorPrimary"
         android:paddingTop="25dp"
         android:text="Finalisation d'intervention"
         android:textAlignment="center"

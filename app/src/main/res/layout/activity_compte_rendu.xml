@@ -10,7 +10,7 @@
         android:id="@+id/label_di6"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="?attr/colorPrimary"
         android:paddingTop="25dp"
         android:text="Compte rendu de fin de chantier"
         android:textAlignment="center"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="PROCHAINE ETAPE "
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
             android:layout_marginBottom="50dp"
             android:text="Le compte rendu de fin de chantier"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
             android:layout_marginBottom="50dp"
             android:text="Soyez le plus précis possible SVP"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,14 +121,14 @@
             android:layout_weight="2"
             android:paddingLeft="100dp"
             android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
+            app:srcCompat="?attr/logohhs" />
 
         <ImageView
             android:id="@+id/imageView24"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
+            app:srcCompat="?attr/motifhhs" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

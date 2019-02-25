@@ -32,10 +32,14 @@ import java.util.Locale;
 public class planning extends AppCompatActivity {
 
     String id_equipe;
+    String nom_equipe;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     ArrayList<Pose> poses = new ArrayList<Pose>();
     RecyclerView calendrier;
     Calendar cal;
+
+
+
 
     LinearLayoutManager llm = new LinearLayoutManager(this);
 
@@ -44,9 +48,13 @@ public class planning extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planning);
 
-        cal = Calendar.getInstance();
+        //Recuperation variable
+
         Intent i = getIntent();
         id_equipe = i.getExtras().getString("id_equipe");
+        nom_equipe = i.getExtras().getString("nom_equipe");
+
+        cal = Calendar.getInstance();
 
         //vendredi = 6
         //lundi = 2
@@ -55,16 +63,16 @@ public class planning extends AppCompatActivity {
 
         Date currentDay = cal.getTime();
         String currentDayString = df.format(currentDay);
+
         try {
             currentDay = df.parse(currentDayString);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-
         Pose p = new Pose();
-        p.setTitle((String) DateFormat.format("EEEE", currentDay));
-        p.setStart(new Timestamp(currentDay));
+        p.setName((String) DateFormat.format("EEEE", currentDay));
+        p.setX_date_pose(new Timestamp(currentDay));
 
         poses.add(p);
 
@@ -76,8 +84,8 @@ public class planning extends AppCompatActivity {
             currentDayString = df.format(currentDay);
 
             p = new Pose();
-            p.setTitle((String) DateFormat.format("EEEE", currentDay));
-            p.setStart(new Timestamp(currentDay));
+            p.setName((String) DateFormat.format("EEEE", currentDay));
+            p.setX_date_pose(new Timestamp(currentDay));
 
             poses.add(p);
 
@@ -91,29 +99,32 @@ public class planning extends AppCompatActivity {
             currentDayString = df.format(currentDay);
 
             p = new Pose();
-            p.setTitle((String) DateFormat.format("EEEE", currentDay));
-            p.setStart(new Timestamp(currentDay));
+            p.setName((String) DateFormat.format("EEEE", currentDay));
+            p.setX_date_pose(new Timestamp(currentDay));
 
             poses.add(p);
 
         }
 
-        db.collection("Poses").orderBy("start").get()
+        db.collection("Poses").orderBy("x_date_pose").whereEqualTo("equipe", id_equipe).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-
                                 Pose pose = document.toObject(Pose.class);
-                                if(pose.getStart().getSeconds() > poses.get(0).getStart().getSeconds()) {
+
+                                Log.e("TESTTT", pose.getX_date_pose().toString());
+                                Log.e("TESTTT", poses.get(0).getX_date_pose().toString());
+
+                                if(pose.getX_date_pose().getSeconds() > poses.get(0).getX_date_pose().getSeconds()) {
                                     poses.add(pose);
                                 }
                             }
 
                             Collections.sort(poses, new Comparator<Pose>() {
                                 @Override public int compare(Pose p1, Pose p2) {
-                                    return (int) (p1.getStart().getSeconds() - p2.getStart().getSeconds()); // Ascending
+                                    return (int) (p1.getX_date_pose().getSeconds() - p2.getX_date_pose().getSeconds()); // Ascending
                                 }
 
                             });
@@ -133,7 +144,7 @@ public class planning extends AppCompatActivity {
                                 }
                             });
 
-                        } else {
+                       } else {
                             Log.d("TEST", "Error getting documents: ", task.getException());
                         }
                     }
@@ -186,18 +197,18 @@ public class planning extends AppCompatActivity {
         public void bind(Pose pose) {
 
             if(pose.getEquipe() == null){
-                title.setText(getDate(pose.getStart().getSeconds() * 1000, "dd/MM/yyyy"));
+                title.setText(getDate(pose.getX_date_pose().getSeconds() * 1000, "dd/MM/yyyy"));
                 this.itemView.setBackgroundColor(Color.parseColor("#dddddd"));
                 title.setTextColor(Color.parseColor("#ffffff"));
                 date.setTextColor(Color.parseColor("#ffffff"));
             }else{
-                title.setText(pose.getTitle());
+                title.setText(pose.getName());
             }
 
             if(pose.getEquipe() == null){
-                date.setText(pose.getTitle().toUpperCase());
+                date.setText(pose.getName().toUpperCase());
             }else{
-                date.setText(getDate(pose.getStart().getSeconds() * 1000, "HH:mm"));
+                date.setText(getDate(pose.getX_date_pose().getSeconds() * 1000, "HH:mm"));
                 this.itemView.setId(poses.indexOf(pose));
                 this.itemView.setOnClickListener(this);
             }
@@ -208,9 +219,8 @@ public class planning extends AppCompatActivity {
 
             Intent i = new Intent(planning.this, demande_intervention.class);
 
-            SingletonPose.getInstance().pose = poses.get(view.getId());
+            PoseSingleton.getInstance().init(poses.get(view.getId()));
 
-            i.putExtra("id_pose", poses.get(view.getId()).getEquipe());
             startActivity(i);
 
         }

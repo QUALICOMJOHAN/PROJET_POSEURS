@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:text="Félicitations ! Vous êtes installé!"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nous tenons à vous remercier de votre confiance et nous souhaitons connaitre votre niveau de satisfaction."
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                     android:layout_marginBottom="25dp"
                     android:text="Ci-après commencera une rapide enquête qualité. Soyez le plus franc possible, cela nous permet de garantir à tous nos clients les meilleurs services."
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="30sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/label_planning" />
@@ -101,14 +101,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
         </LinearLayout>
@@ -118,7 +118,7 @@
         android:id="@+id/label_qst3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Qestionnaire de satisfaction terminé"
         android:textAlignment="center"

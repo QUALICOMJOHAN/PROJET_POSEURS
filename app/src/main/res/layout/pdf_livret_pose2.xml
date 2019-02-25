@@ -184,26 +184,6 @@
 
 
         <LinearLayout
-            android:id="@+id/ps2"
-            android:layout_width="50mm"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <CheckBox
-                android:id="@+id/check_ps2"
-                android:layout_width="20mm"
-                android:layout_height="wrap_content"
-                android:text="Pas satisfait" />
-
-            <ImageView
-                android:id="@+id/imageView322"
-                android:layout_width="20mm"
-                android:layout_height="20mm"
-                app:srcCompat="@drawable/passatisfait" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/m2"
             android:layout_width="50mm"
             android:layout_height="match_parent"
@@ -214,7 +194,27 @@
                 android:id="@+id/check_m2"
                 android:layout_width="20mm"
                 android:layout_height="wrap_content"
-                android:text="Pas satisfait" />
+                android:text="Partiellement" />
+
+            <ImageView
+                android:id="@+id/imageView322"
+                android:layout_width="20mm"
+                android:layout_height="20mm"
+                app:srcCompat="@drawable/passatisfait" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ps2"
+            android:layout_width="50mm"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/check_ps2"
+                android:layout_width="20mm"
+                android:layout_height="wrap_content"
+                android:text="Non, pas du tout" />
 
             <ImageView
                 android:id="@+id/imageView332"

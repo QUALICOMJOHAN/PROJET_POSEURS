@@ -13,6 +13,11 @@ public class q_satisfaction_debut extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_q_satisfaction_debut);
 
         next = (Button) findViewById(R.id.commencer);

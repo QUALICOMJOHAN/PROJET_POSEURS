@@ -13,6 +13,11 @@ public class donner_tab_client extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_donner_tab_client);
 
         next = (Button) findViewById(R.id.btn_commencer_inter);

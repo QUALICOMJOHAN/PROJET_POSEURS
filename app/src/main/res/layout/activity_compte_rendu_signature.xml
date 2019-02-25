@@ -38,10 +38,11 @@
 
                 <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/textureView7"
+                    android:id="@+id/textureView1"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/grisclair" />
+                    android:background="?attr/grisclair"
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/label_valid_inter2"
@@ -61,22 +62,24 @@
 
                     <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/textureView3"
+                        android:id="@+id/textureView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:background="@color/grisclair"
+                        android:background="?attr/grisclair"
+                        android:visibility="invisible"
                         app:penColor="@android:color/black" />
 
                     <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/textureView4"
+                        android:id="@+id/textureView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:background="@color/grisclair"
+                        android:background="?attr/grisclair"
+                        android:visibility="invisible"
                         app:penColor="@android:color/black" />
                 </LinearLayout>
 
@@ -88,22 +91,24 @@
 
                     <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/textureView5"
+                        android:id="@+id/textureView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:background="@color/grisclair"
+                        android:background="?attr/grisclair"
+                        android:visibility="invisible"
                         app:penColor="@android:color/black" />
 
                     <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/textureView6"
+                        android:id="@+id/textureView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:background="@color/grisclair"
+                        android:background="?attr/grisclair"
+                        android:visibility="invisible"
                         app:penColor="@android:color/black" />
                 </LinearLayout>
 
@@ -144,14 +149,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
         </LinearLayout>
@@ -161,7 +166,7 @@
         android:id="@+id/label_cr"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="?attr/colorPrimary"
         android:paddingTop="25dp"
         android:text="Compte rendu de fin de chantier"
         android:textAlignment="center"

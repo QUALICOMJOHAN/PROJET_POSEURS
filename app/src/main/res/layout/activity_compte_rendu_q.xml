@@ -23,7 +23,7 @@
                 android:layout_margin="25dp"
                 android:text="Points de contrôle"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
                         android:layout_height="15dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.005"
-                        android:background="@color/orangefonce" />
+                        android:background="?attr/orangefonce" />
 
                     <TextView
                         android:id="@+id/legende"
@@ -83,7 +83,7 @@
                         android:layout_height="15dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.005"
-                        android:background="@color/colorPrimary" />
+                        android:background="?attr/colorPrimary" />
 
                     <TextView
                         android:id="@+id/legende2"
@@ -111,40 +111,44 @@
                         app:layout_constraintTop_toBottomOf="@+id/label_photo_souvenir">
 
                         <Button
-                            android:id="@+id/resp"
+                            android:id="@+id/tech1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:background="@color/orangefonce"
+                            android:background="?attr/orangefonce"
                             android:text="Responsable"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:visibility="invisible" />
 
                         <Button
-                            android:id="@+id/assistant"
+                            android:id="@+id/tech2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:background="@color/colorPrimary"
+                            android:background="?attr/colorPrimary"
                             android:text="Assistant"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:visibility="invisible" />
 
                         <Button
-                            android:id="@+id/assistant2"
+                            android:id="@+id/tech3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:background="@color/colorPrimary"
+                            android:background="?attr/colorPrimary"
                             android:text="Assistant"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:visibility="invisible" />
 
                         <Button
-                            android:id="@+id/assistant3"
+                            android:id="@+id/tech4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:background="@color/colorPrimary"
+                            android:background="?attr/colorPrimary"
                             android:text="Assistant"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:visibility="invisible" />
                     </LinearLayout>
                 </ScrollView>
 
@@ -169,7 +173,8 @@
                     android:paddingRight="75dp"
                     android:paddingBottom="25dp"
                     android:text="Suivant"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -189,14 +194,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
 
@@ -207,7 +212,7 @@
         android:id="@+id/label_cr"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="?attr/colorPrimary"
         android:paddingTop="25dp"
         android:text="Compte rendu de fin de chantier"
         android:textAlignment="center"

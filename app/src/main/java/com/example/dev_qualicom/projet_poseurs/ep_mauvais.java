@@ -16,6 +16,11 @@ public class ep_mauvais extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_ep_mauvais);
 
         suivant = (Button) findViewById(R.id.suivant);

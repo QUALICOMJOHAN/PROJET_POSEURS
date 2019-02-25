@@ -11,6 +11,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -36,6 +37,11 @@ public class photo_pre_inter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_photo_pre_inter);
 
         photos = initPhoto();
@@ -120,10 +126,12 @@ public class photo_pre_inter extends AppCompatActivity {
     private File createImageFile() throws IOException {
 
         // Create an image file name
-        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_test"+".jpg");
+        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/pre")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
+
+        Log.e("TESTTT", mCurrentPhotoPath);
 
         return image;
     }
@@ -194,13 +202,13 @@ public class photo_pre_inter extends AppCompatActivity {
 
             title.setText(photo.getTitre());
 
-            File imgFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
+            File imgFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/pre")+"/"+ photo.getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
 
             if(imgFile.exists()){
 
-                photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/pre")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
+                photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/pre")+"/"+ photo.getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
                 Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-                imageView.setImageBitmap(myBitmap);
+                imageView.setImageBitmap(Bitmap.createScaledBitmap(myBitmap, 120, 120, false));
 
             }
 

@@ -5,14 +5,20 @@
     <color name="colorAccent">#e2f3fe</color>
     <color name="orangefonce">#c3610c</color>
     <color name="grisclair">#f3f3f3</color>
+
+    <color name="ewcolorPrimary">#2EB1D7</color>
+    <color name="ewcolorPrimaryDark">#A8C823</color>
+    <color name="ewcolorAccent">#e2f3fe</color>
+    <color name="eworangefonce">#DEDC03</color>
+    <color name="ewgrisclair">#528CBD</color>
 </resources>
 
     <!--
-
+<resources>
      <color name="colorPrimary">#2EB1D7</color>
     <color name="colorPrimaryDark">#A8C823</color>
     <color name="colorAccent">#e2f3fe</color>
     <color name="orangefonce">#DEDC03</color>
     <color name="grisclair">#528CBD</color>
-
+</resources>
     -->

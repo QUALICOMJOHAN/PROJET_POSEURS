@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     TextView login;
     TextView pass;
     String id_equipe;
+    String nom_equipe;
+    ArrayList<Techniciens> tab = new ArrayList<Techniciens>();
 
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -63,6 +65,23 @@ public class MainActivity extends AppCompatActivity {
 //        intent.setType("file/*");
 //        startActivityForResult(intent, 2);
 
+        db.collection("Techniciens").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                    tab.add(new Techniciens(document.getId(), document.getData().get("nom").toString(), document.getData().get("prenom").toString()));
+
+                                }
+                            }
+
+                            TechsSingleton.getInstance().init(tab);
+                        }
+        });
+
         checkPermissions();
 
         login = (TextView) findViewById(R.id.identifiant);
@@ -83,13 +102,23 @@ public class MainActivity extends AppCompatActivity {
 
                                         if(document.get("pass").toString().equals(md5(pass.getText().toString()))){
 
+                                            Equipe equipe = document.toObject(Equipe.class);
+
+                                            equipe.setId(document.getId());
+
+                                            EquipeSingleton.getInstance().init(equipe);
+
+                                            Log.e("TESTTT", EquipeSingleton.getInstance().getEquipe().getNom());
+
                                             id_equipe = document.getId();
+                                            nom_equipe = document.get("nom").toString();
 
                                             runOnUiThread(new Runnable() {
                                                 @Override
                                                 public void run() {
                                                     Intent i = new Intent(MainActivity.this, planning.class);
                                                     i.putExtra("id_equipe", id_equipe);
+                                                    i.putExtra("nom_equipe", nom_equipe);
                                                     startActivity(i);
                                                 }
                                             });

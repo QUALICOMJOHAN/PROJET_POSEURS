@@ -10,7 +10,7 @@
         android:id="@+id/label_qst2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="?attr/colorPrimary"
         android:paddingTop="25dp"
         android:text="Finalisation d’intervention"
         android:textAlignment="center"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:text="Fin d’intervention !"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
             android:layout_marginTop="25dp"
             android:text="Merci pour votre travail et votre professionalisme !"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,14 +106,14 @@
             android:layout_weight="2"
             android:paddingLeft="100dp"
             android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
+            app:srcCompat="?attr/logohhs" />
 
         <ImageView
             android:id="@+id/imageView24"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
+            app:srcCompat="?attr/motifhhs" />
 
     </LinearLayout>
 

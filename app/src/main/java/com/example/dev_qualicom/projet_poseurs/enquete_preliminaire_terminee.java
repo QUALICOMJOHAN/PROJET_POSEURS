@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -19,15 +22,25 @@ public class enquete_preliminaire_terminee extends AppCompatActivity {
     Button suivant;
     ArrayList<Question> objects = new ArrayList<Question>();
     TextView code_view;
-    String code = md5(SingletonPose.getInstance().pose.getTitle()).substring(0,5);
+    String code = md5(PoseSingleton.getInstance().getPose().getName()).substring(0,5);
+    TextView input_q;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    DocumentReference pose = db.collection("Poses").document(PoseSingleton.getInstance().getPose().getId().toString());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_enquete_preliminaire_terminee);
 
+        pose.update("error", 1);
         suivant = (Button) findViewById(R.id.suivant);
         code_view = (TextView) findViewById(R.id.code_tech);
+        input_q = (TextView)findViewById(R.id.input_q);
 
         Log.e("TEST", code);
 
@@ -35,6 +48,12 @@ public class enquete_preliminaire_terminee extends AppCompatActivity {
         objects = (ArrayList<Question>) extra.getSerializable("objects");
 
         suivant.setVisibility(View.INVISIBLE);
+
+        for(Question q : objects){
+            if(!q.isEqual()){
+                input_q.setText(input_q.getText().toString()+"\n"+q.getNum()+": "+q.getQuestion());
+            }
+        }
 
         code_view.addTextChangedListener(new TextWatcher() {
             @Override
@@ -60,6 +79,7 @@ public class enquete_preliminaire_terminee extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                pose.update("error", 0);
                 Intent i = new Intent(enquete_preliminaire_terminee.this, enquete_preliminaire_apres_num.class);
                 Bundle extra = new Bundle();
                 extra.putSerializable("objects", objects);

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppTheme">
+        <attr name="orangefonce" format="reference" />
+        <attr name="grisclair" format="reference" />
+        <attr name="motifhhs" format="reference" />
+        <attr name="logohhs" format="reference" />
+    </declare-styleable>
+</resources>

@@ -168,86 +168,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/info_commande_ctn">
 
                 <LinearLayout
+                    android:id="@+id/galerie"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <ImageView
-                        android:id="@+id/imageView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@mipmap/ic_launcher" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -269,7 +194,7 @@
                 android:layout_width="650dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="25dp"
-                android:background="@color/grisclair"
+                android:background="?attr/grisclair"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -311,14 +236,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
 
@@ -329,7 +254,7 @@
         android:id="@+id/label_auto_donnes2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Autorisation d'utilisation des données"
         android:textAlignment="center"

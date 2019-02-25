@@ -37,6 +37,11 @@ public class photo_post_inter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_photo_post_inter);
 
         photos = initPhoto();
@@ -120,9 +125,9 @@ public class photo_post_inter extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
 
-        Log.e("TEST", getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/post")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_test"+".jpg");
+        Log.e("TEST", getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/post")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
 
-        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/post")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_test"+".jpg");
+        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/post")+"/"+ photos.get(currenteSelected).getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
@@ -196,13 +201,13 @@ public class photo_post_inter extends AppCompatActivity {
 
             title.setText(photo.getTitre());
 
-            File imgFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/post")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
+            File imgFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/post")+"/"+ photo.getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
 
             if(imgFile.exists()){
 
-                photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/post")+"/"+ photo.getPrefix_photo()+"_test"+".jpg");
+                photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/post")+"/"+ photo.getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
                 Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-                imageView.setImageBitmap(myBitmap);
+                imageView.setImageBitmap(Bitmap.createScaledBitmap(myBitmap, 120, 120, false));
 
             }
 

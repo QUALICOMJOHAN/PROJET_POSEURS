@@ -31,6 +31,11 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_finalisation_inter_import_thermique);
 
         image = (ImageView)findViewById(R.id.image);
@@ -67,6 +72,7 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
                     useImage(mImageUri, sign);
 
                     Intent next = new Intent(finalisation_inter_import_thermique.this, finalisation_inter_import_thermique2.class);
+                    next.putExtra("nb", 1);
                     startActivity(next);
 
                 } else {
@@ -81,6 +87,7 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
                             useImage(uri, sign);
                         }
                         Intent next = new Intent(finalisation_inter_import_thermique.this, finalisation_inter_import_thermique2.class);
+                        next.putExtra("nb", mClipData.getItemCount());
                         startActivity(next);
                     }
                 }

@@ -32,7 +32,7 @@
                     android:layout_marginTop="50dp"
                     android:text="C’est terminé !"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
                     android:layout_marginTop="25dp"
                     android:text="Le technicien va finaliser avec vous certains documents et vous allez profiter pleinement de votre nouveau confort !"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                     android:layout_marginTop="50dp"
                     android:text="Vous pouvez redonner la tablette au technicien"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="?attr/colorPrimaryDark"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -105,14 +105,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
 
@@ -123,7 +123,7 @@
         android:id="@+id/label_fi2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Finalisation d'intervention"
         android:textAlignment="center"

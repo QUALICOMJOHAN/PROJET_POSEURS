@@ -3,18 +3,16 @@ package com.example.dev_qualicom.projet_poseurs;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class cheque_paiement extends AppCompatActivity {
 
@@ -25,6 +23,19 @@ public class cheque_paiement extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
+        File file  = new File(this.getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId())+"/documents", "cheque_paiement.jpg");
+
+        if(file.exists()){
+            Intent intent = new Intent(cheque_paiement.this, finalisation_inter_import_thermique.class);
+            startActivity(intent);
+            finish();
+        }
+
         setContentView(R.layout.activity_cheque_paiement);
 
         commencer = (Button) findViewById(R.id.commencer);
@@ -87,15 +98,7 @@ public class cheque_paiement extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
 
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "CHEQUE_PAIEMENT" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/test");
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
+        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/documents")+"/cheque_paiement.jpg");
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();

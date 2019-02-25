@@ -10,7 +10,7 @@
         android:id="@+id/label_qs"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Questionnaire de satisfaction"
         android:textAlignment="center"
@@ -112,14 +112,14 @@
             android:layout_weight="2"
             android:paddingLeft="100dp"
             android:paddingBottom="10dp"
-            app:srcCompat="@drawable/logohhs" />
+            app:srcCompat="?attr/logohhs" />
 
         <ImageView
             android:id="@+id/imageView24"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/motifhhs" />
+            app:srcCompat="?attr/motifhhs" />
 
     </LinearLayout>
 

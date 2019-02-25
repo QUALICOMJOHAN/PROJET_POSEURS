@@ -13,6 +13,11 @@ public class finalisation_inter_certif extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_finalisation_inter_certif);
 
         next = (Button) findViewById(R.id.suivant);

@@ -5,14 +5,21 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hendrix.pdfmyxml.PdfDocument;
 import com.hendrix.pdfmyxml.viewRenderer.AbstractViewRenderer;
 
@@ -21,10 +28,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class enquete_preliminaire_recap_signature extends AppCompatActivity {
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     SignaturePad mSignaturePad;
     Button next;
     CheckBox oui1, oui2, oui3, oui4, oui5, oui6, oui7, oui8, oui9, oui10;
@@ -33,10 +42,17 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
     ArrayList<CheckBox> non = new ArrayList<CheckBox>();
     String mCurrentSgnaturePath;
     ArrayList<Question> objects = new ArrayList<Question>();
+    TextView nom, equipe, date, q1;
+    String nom_equipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_enquete_preliminaire_recap_signature);
 
         mSignaturePad = (SignaturePad) findViewById(R.id.signature);
@@ -62,6 +78,38 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
         non.add(non8 = (CheckBox)findViewById(R.id.non8));
         non.add(non9 = (CheckBox)findViewById(R.id.non9));
         non.add(non10 = (CheckBox)findViewById(R.id.non10));
+
+        nom = (TextView)findViewById(R.id.nom);
+        equipe = (TextView)findViewById(R.id.nom_equipe);
+        date = (TextView)findViewById(R.id.date);
+        q1 = (TextView)findViewById(R.id.q1);
+
+
+        q1.setText("Etes-vous satisfait de notre technicien conseil Mr "+ PoseSingleton.getInstance().getPose().getVendeur()+" ?");
+
+        DocumentReference docRef = db.collection("Equipes").document(PoseSingleton.getInstance().getPose().getEquipe());
+         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+             @Override
+             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                 if (task.isSuccessful()) {
+                     final DocumentSnapshot document = task.getResult();
+                     if (document.exists()) {
+                         runOnUiThread(new Runnable() {
+                             @Override
+                             public void run() {
+                                 nom_equipe = document.getData().get("nom").toString();
+                                 equipe.setText(document.getData().get("nom").toString());
+                             }
+                         });
+                     }
+                 }
+             }
+         });
+
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        nom.setText(PoseSingleton.getInstance().getPose().getName());
+        date.setText(df.format(PoseSingleton.getInstance().getPose().x_date_pose.toDate()));
+
 
         Bundle extra = getIntent().getBundleExtra("extra");
         objects = (ArrayList<Question>) extra.getSerializable("objects");
@@ -113,6 +161,10 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
                         CheckBox no1, no2, no3, no4, no5, no6, no7, no8, no9, no10;
                         ArrayList<CheckBox> ou = new ArrayList<CheckBox>();
                         ArrayList<CheckBox> no = new ArrayList<CheckBox>();
+                        TextView nompdf = (TextView)view.findViewById(R.id.nom);
+                        TextView equipepdf = (TextView)view.findViewById(R.id.nom_equipe);
+                        TextView datepdf = (TextView)view.findViewById(R.id.date);
+                        TextView q1pdf = (TextView)view.findViewById(R.id.q1);
 
                         ou.add(ou1 = (CheckBox)view.findViewById(R.id.oui));
                         ou.add(ou2 = (CheckBox)view.findViewById(R.id.oui2));
@@ -154,6 +206,13 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
 
                         signature.setImageBitmap(bitmap);
 
+                        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+                        nompdf.setText(PoseSingleton.getInstance().getPose().getName());
+                        datepdf.setText(df.format(PoseSingleton.getInstance().getPose().x_date_pose.toDate()));
+                        q1pdf.setText("Etes-vous satisfait de notre technicien conseil Mr "+ PoseSingleton.getInstance().getPose().getVendeur()+" ?");
+                        equipepdf.setText(enquete_preliminaire_recap_signature.this.nom_equipe);
+
+
                     }
                 };
 
@@ -166,7 +225,7 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
                 doc.setRenderHeight(297);
                 doc.setOrientation(PdfDocument.A4_MODE.PORTRAIT);
                 doc.setFileName("Livret_installation_3");
-                doc.setSaveDirectory(enquete_preliminaire_recap_signature.this.getExternalFilesDir(null));
+                doc.setSaveDirectory(enquete_preliminaire_recap_signature.this.getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()));
                 doc.setInflateOnMainThread(false);
                 doc.setListener(new PdfDocument.Callback() {
                     @Override
@@ -216,7 +275,7 @@ public class enquete_preliminaire_recap_signature extends AppCompatActivity {
     private String createStringPathFile(String name) throws IOException {
 
         String imageFileName = "signature_"+name+"_diff";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/test");
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/signature");
 
         mCurrentSgnaturePath = storageDir+"/"+imageFileName+".png";
 

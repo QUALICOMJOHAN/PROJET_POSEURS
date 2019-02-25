@@ -13,6 +13,11 @@ public class photo_post_inter_avant extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_photo_post_inter_avant);
 
         next = (Button) findViewById(R.id.commencer_post);

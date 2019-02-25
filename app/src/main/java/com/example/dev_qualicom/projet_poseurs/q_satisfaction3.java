@@ -17,10 +17,16 @@ public class q_satisfaction3 extends AppCompatActivity {
     private int currentq = 1;
     private TextView numq, question;
     private ArrayList<Question> tabq = new ArrayList<Question>();
+    ArrayList<String[]> tab = new ArrayList<String[]>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_q_satisfaction3);
 
         init_tab_question();
@@ -28,18 +34,23 @@ public class q_satisfaction3 extends AppCompatActivity {
         oui = (Button) findViewById(R.id.oui);
         non = (Button) findViewById(R.id.non);
 
+        Bundle extra = getIntent().getBundleExtra("extra");
+        tab = (ArrayList<String[]>) extra.getSerializable("objects");
+
         numq = (TextView)findViewById(R.id.numq);
         question = (TextView)findViewById(R.id.label_valid_horaires);
 
         oui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tab.add(new String[]{tabq.get(currentq-1).getQuestion(), "oui"});
                 q_suivante(true);
             }
         });
         non.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tab.add(new String[]{tabq.get(currentq-1).getQuestion(), "non"});
                 q_suivante(false);
             }
         });
@@ -54,7 +65,7 @@ public class q_satisfaction3 extends AppCompatActivity {
 
             Intent intent = new Intent(q_satisfaction3.this, q_satisfaction_temoignage.class);
             Bundle extra = new Bundle();
-            extra.putSerializable("objects", tabq);
+            extra.putSerializable("objects", tab);
             intent.putExtra("extra", extra);
             startActivity(intent);
             finish();

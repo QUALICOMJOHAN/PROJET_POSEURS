@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:text="Date"
                         android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="?attr/colorPrimaryDark"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -119,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:text="Date"
                         android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="?attr/colorPrimaryDark"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -197,24 +197,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/intervention">
 
                 <TableLayout
+                    android:id="@+id/table"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
                 </TableLayout>
             </ScrollView>
 
@@ -254,14 +240,14 @@
                     android:layout_weight="2"
                     android:paddingLeft="100dp"
                     android:paddingBottom="10dp"
-                    app:srcCompat="@drawable/logohhs" />
+                    app:srcCompat="?attr/logohhs" />
 
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/motifhhs" />
+                    app:srcCompat="?attr/motifhhs" />
 
             </LinearLayout>
         </LinearLayout>
@@ -271,7 +257,7 @@
         android:id="@+id/label_auto_donnes"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
         android:text="Procès Verbal de fin de chantier"
         android:textAlignment="center"

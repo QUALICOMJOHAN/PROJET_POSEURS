@@ -32,6 +32,11 @@ public class enquete_preliminaire extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+            setTheme(R.style.AppTheme_Ew);
+        }
+
         setContentView(R.layout.activity_enquete_preliminaire);
 
         init_tab_question();
@@ -40,6 +45,9 @@ public class enquete_preliminaire extends AppCompatActivity {
 
         question = (TextView) findViewById(R.id.label_photo_souvenir);
         numq = (TextView) findViewById(R.id.numq);
+
+        question.setText(tabq.get(currentq-1).getQuestion());
+        numq.setText(tabq.get(currentq-1).getNum()+"/10");
 
         oui = (Button) findViewById(R.id.oui);
         non = (Button) findViewById(R.id.non);
@@ -143,7 +151,7 @@ public class enquete_preliminaire extends AppCompatActivity {
 
     private void init_tab_question(){
 
-        tabq.add(new Question(1, "Enquête préliminaire Etes-vous satisfait de notre technicien M.TECHNICIEN ?",true));
+        tabq.add(new Question(1, "Etes-vous satisfait de notre technicien M."+ PoseSingleton.getInstance().getPose().getVendeur() +" ?",true));
         tabq.add(new Question(2, "Avez-vous parfaitement compris ses explications ?",true));
         tabq.add(new Question(3, "Avez-vous compris l’ensemble de votre bon de commande ?",true));
         tabq.add(new Question(4, "Avez-vous des questions sur votre offre de financement ?",false));
