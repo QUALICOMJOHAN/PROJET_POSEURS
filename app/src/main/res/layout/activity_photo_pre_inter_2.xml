@@ -80,7 +80,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/footer"
+                android:id="@+id/footerhhs"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="25dp"

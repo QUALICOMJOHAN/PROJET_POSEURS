@@ -120,7 +120,7 @@
         android:layout_height="100dp"
         android:background="?attr/colorPrimaryDark"
         android:paddingTop="25dp"
-        android:text="Qestionnaire de satisfaction terminé"
+        android:text="Questionnaire de satisfaction"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"

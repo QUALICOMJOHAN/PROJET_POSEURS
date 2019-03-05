@@ -45,7 +45,7 @@
         android:layout_marginTop="225sp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintBottom_toTopOf="@+id/footerhhs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
     </ScrollView>
 
     <LinearLayout
-        android:id="@+id/footer"
+        android:id="@+id/footerhhs"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
