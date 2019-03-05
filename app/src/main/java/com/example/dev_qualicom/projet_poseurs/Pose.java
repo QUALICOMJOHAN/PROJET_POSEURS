@@ -28,6 +28,15 @@ public class Pose {
     Timestamp x_date_vente;
     Timestamp start_pose;
     String societe;
+    boolean x_dossier_financement;
+
+    public boolean isX_dossier_financement() {
+        return x_dossier_financement;
+    }
+
+    public void setX_dossier_financement(boolean x_dossier_financement) {
+        this.x_dossier_financement = x_dossier_financement;
+    }
 
     public String getSociete() {
         return societe;

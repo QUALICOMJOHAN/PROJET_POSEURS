@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.File;
 
@@ -30,6 +31,21 @@ public class validation_install extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_validation_install);
+
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(validation_install.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         commencer = (Button) findViewById(R.id.commencer_inter);
 

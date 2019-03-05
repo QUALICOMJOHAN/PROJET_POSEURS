@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,21 @@ public class q_satisfaction2 extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_q_satisfaction2);
+
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(q_satisfaction2.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         Bundle extra = getIntent().getBundleExtra("extra");
         tabq = (ArrayList<String[]>) extra.getSerializable("objects");

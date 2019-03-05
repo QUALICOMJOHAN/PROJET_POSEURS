@@ -29,6 +29,21 @@ public class photo_pre_inter_2 extends AppCompatActivity {
 
         setContentView(R.layout.activity_photo_pre_inter_2);
 
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(photo_pre_inter_2.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
         Intent i = getIntent();
         id = i.getExtras().getInt("id");
         photopath = i.getExtras().getString("photo");

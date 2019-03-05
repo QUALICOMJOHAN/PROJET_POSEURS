@@ -38,6 +38,21 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
 
         setContentView(R.layout.activity_finalisation_inter_import_thermique);
 
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(finalisation_inter_import_thermique.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
         image = (ImageView)findViewById(R.id.image);
         importe = (Button) findViewById(R.id.importer);
 

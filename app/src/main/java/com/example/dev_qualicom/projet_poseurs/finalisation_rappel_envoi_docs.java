@@ -28,6 +28,21 @@ public class finalisation_rappel_envoi_docs extends AppCompatActivity {
 
         setContentView(R.layout.activity_finalisation_rappel_envoi_docs);
 
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(finalisation_rappel_envoi_docs.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
         next = (Button) findViewById(R.id.suivant);
 
         galerie = (LinearLayout) findViewById(R.id.galerie);

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
 
@@ -40,6 +41,21 @@ public class compte_rendu_signature extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_compte_rendu_signature);
+
+        ImageView retour = (ImageView) findViewById(R.id.retour_btn);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(compte_rendu_signature.this, planning.class);
+                String id_equipe = EquipeSingleton.getInstance().getEquipe().getId();
+                String nom_equipe = EquipeSingleton.getInstance().getEquipe().getNom();
+                i.putExtra("id_equipe", id_equipe);
+                i.putExtra("nom_equipe", nom_equipe);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         mSignaturePad1 = (SignaturePad) findViewById(R.id.textureView1);
 
