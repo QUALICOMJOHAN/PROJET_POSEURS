@@ -24,11 +24,85 @@ public class Pose {
     ArrayList<String> x_rapport_pac_air_air = new ArrayList<String>();
     ArrayList<String> x_rapport_pac_air_eau = new ArrayList<String>();
     ArrayList<String> x_rapport_remise_niveau = new ArrayList<String>();
+
+    Boolean x_autoconsommation;
+    Boolean x_ballon_thermodynamique;
+    Boolean x_batterie;
+    Boolean x_booster;
+    Boolean x_complement_pose;
+    Boolean x_pac_air_air;
+    Boolean x_pac_air_eau;
+    Boolean x_remise_niveau;
+
     String vendeur;
     Timestamp x_date_vente;
     Timestamp start_pose;
     String societe;
     boolean x_dossier_financement;
+
+    public Boolean getX_autoconsommation() {
+        return x_autoconsommation;
+    }
+
+    public void setX_autoconsommation(Boolean x_autoconsommation) {
+        this.x_autoconsommation = x_autoconsommation;
+    }
+
+    public Boolean getX_ballon_thermodynamique() {
+        return x_ballon_thermodynamique;
+    }
+
+    public void setX_ballon_thermodynamique(Boolean x_ballon_thermodynamique) {
+        this.x_ballon_thermodynamique = x_ballon_thermodynamique;
+    }
+
+    public Boolean getX_batterie() {
+        return x_batterie;
+    }
+
+    public void setX_batterie(Boolean x_batterie) {
+        this.x_batterie = x_batterie;
+    }
+
+    public Boolean getX_booster() {
+        return x_booster;
+    }
+
+    public void setX_booster(Boolean x_booster) {
+        this.x_booster = x_booster;
+    }
+
+    public Boolean getX_complement_pose() {
+        return x_complement_pose;
+    }
+
+    public void setX_complement_pose(Boolean x_complement_pose) {
+        this.x_complement_pose = x_complement_pose;
+    }
+
+    public Boolean getX_pac_air_air() {
+        return x_pac_air_air;
+    }
+
+    public void setX_pac_air_air(Boolean x_pac_air_air) {
+        this.x_pac_air_air = x_pac_air_air;
+    }
+
+    public Boolean getX_pac_air_eau() {
+        return x_pac_air_eau;
+    }
+
+    public void setX_pac_air_eau(Boolean x_pac_air_eau) {
+        this.x_pac_air_eau = x_pac_air_eau;
+    }
+
+    public Boolean getX_remise_niveau() {
+        return x_remise_niveau;
+    }
+
+    public void setX_remise_niveau(Boolean x_remise_niveau) {
+        this.x_remise_niveau = x_remise_niveau;
+    }
 
     public boolean isX_dossier_financement() {
         return x_dossier_financement;
@@ -218,49 +292,49 @@ public class Pose {
 
         ArrayList<String> array = new ArrayList<String>();
 
-        if(x_rapport_autoconsommation.size() > 0) {
+        if(x_autoconsommation) {
             array.add("\n"+"Autoconsommation"+"\n");
         }
         for (String s : x_rapport_autoconsommation) {
             array.add(s);
         }
-        if(x_rapport_ballon_thermodynamique.size() > 0) {
+        if(x_ballon_thermodynamique) {
             array.add("\n"+"Ballon thermodynamique"+"\n");
         }
         for (String s : x_rapport_ballon_thermodynamique) {
             array.add(s);
         }
-        if(x_rapport_batterie.size() > 0) {
+        if(x_batterie) {
             array.add("\n"+"Batterie"+"\n");
         }
         for (String s : x_rapport_batterie) {
             array.add(s);
         }
-        if(x_rapport_booster.size() > 0) {
+        if(x_booster) {
             array.add("\n"+"Booster"+"\n");
         }
         for (String s : x_rapport_booster) {
             array.add(s);
         }
-        if(x_rapport_complement_pose.size() > 0) {
+        if(x_complement_pose) {
             array.add("\n"+"Complement pose"+"\n");
         }
         for (String s : x_rapport_complement_pose) {
             array.add(s);
         }
-        if(x_rapport_pac_air_air.size() > 0) {
+        if(x_pac_air_air) {
             array.add("\n"+"PAC AIR/AIR"+"\n");
         }
         for (String s : x_rapport_pac_air_air) {
             array.add(s);
         }
-        if(x_rapport_pac_air_eau.size() > 0) {
+        if(x_pac_air_eau) {
             array.add("\n"+"PAC AIR/EAU"+"\n");
         }
         for (String s : x_rapport_pac_air_eau) {
             array.add(s);
         }
-        if(x_rapport_remise_niveau.size() > 0) {
+        if(x_remise_niveau) {
             array.add("\n"+"Remise a niveau"+"\n");
         }
         for (String s : x_rapport_remise_niveau) {

@@ -79,7 +79,7 @@ public class photo_pre_inter extends AppCompatActivity {
         suivant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(photo_pre_inter.this, guide_inter.class);
+                Intent next = new Intent(photo_pre_inter.this, photo_post_inter_avant.class);
                 startActivity(next);
             }
         });
@@ -223,8 +223,14 @@ public class photo_pre_inter extends AppCompatActivity {
 
                 photo.setFilePath(getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()+"/pre")+"/"+ photo.getPrefix_photo()+"_"+PoseSingleton.getInstance().getPose().getId()+".jpg");
                 Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-                imageView.setImageBitmap(Bitmap.createScaledBitmap(myBitmap, 120, 120, false));
+                imageView.setImageBitmap(Bitmap.createScaledBitmap(myBitmap, 60, 60, false));
 
+            }else{
+                if (PoseSingleton.getInstance().getPose().getSociete().equals("EASY-WATT")) {
+                    imageView.setImageDrawable(getDrawable(R.drawable.motifew));
+                }else{
+                    imageView.setImageDrawable(getDrawable(R.drawable.motifhhs));
+                }
             }
 
             this.itemView.setId(photos.indexOf(photo));
@@ -253,20 +259,78 @@ public class photo_pre_inter extends AppCompatActivity {
 
         ArrayList<PhotoPre> result = new ArrayList<PhotoPre>();
 
-        PhotoPre photo = new PhotoPre("Photo Panneaux", "Panneaux");
-        result.add(photo);
-        photo = new PhotoPre("Photo Panneaux2", "Panneaux2");
-        result.add(photo);
-        photo = new PhotoPre("Photo Maison", "Maison");
-        result.add(photo);
-        photo = new PhotoPre("Photo Ballon", "Ballon");
-        result.add(photo);
-        photo = new PhotoPre("Photo Ballon2", "Ballon2");
-        result.add(photo);
-        photo = new PhotoPre("Photo Maison2", "Maison2");
-        result.add(photo);
-        photo = new PhotoPre("Photo Panneaux3", "Panneaux3");
-        result.add(photo);
+        if(PoseSingleton.getInstance().getPose().getX_remise_niveau()){
+
+            PhotoPre photo = new PhotoPre("Photo Panneaux", "Panneaux");
+            result.add(photo);
+            photo = new PhotoPre("Photo Toiture", "Toiture");
+            result.add(photo);
+            photo = new PhotoPre("Photo Tuiles", "Tuiles");
+            result.add(photo);
+            photo = new PhotoPre("Photo Onduleur Ancien", "Onduleur_Ancien");
+            result.add(photo);
+
+        }
+
+        if (PoseSingleton.getInstance().getPose().getX_ballon_thermodynamique()) {
+
+            if (PoseSingleton.getInstance().getPose().getX_rapport_ballon_thermodynamique().size() != 0) {
+
+                for (String name : PoseSingleton.getInstance().getPose().getX_rapport_ballon_thermodynamique()) {
+
+                    String[] spltstr = name.split("\\s+", 2);
+                    int quantite = Integer.parseInt(spltstr[0]);
+                    String label = spltstr[1];
+
+                    for (int i = 1; i <= quantite; i++) {
+                        PhotoPre photo = new PhotoPre("Photo emplacement ou ancien " + label + " " + i, label + "emplacement_ancien_" + i);
+                        result.add(photo);
+                    }
+                }
+            }
+        }
+
+        if (PoseSingleton.getInstance().getPose().getX_batterie()) {
+
+            if (PoseSingleton.getInstance().getPose().getX_rapport_batterie().size() != 0) {
+
+                for (String name : PoseSingleton.getInstance().getPose().getX_rapport_batterie()) {
+
+                    String[] spltstr = name.split("\\s+", 2);
+                    int quantite = Integer.parseInt(spltstr[0]);
+                    String label = spltstr[1];
+
+                    for (int i = 1; i <= quantite; i++) {
+                        PhotoPre photo = new PhotoPre("Photo emplacement ou ancien " + label + " " + i, label + "emplacement_ancien_" + i);
+                        result.add(photo);
+                    }
+                }
+            }
+        }
+
+        if (PoseSingleton.getInstance().getPose().getX_booster()) {
+
+            if (PoseSingleton.getInstance().getPose().getX_rapport_booster().size() != 0) {
+
+                for (String name : PoseSingleton.getInstance().getPose().getX_rapport_booster()) {
+
+                    String[] spltstr = name.split("\\s+", 2);
+                    int quantite = Integer.parseInt(spltstr[0]);
+                    String label = spltstr[1];
+
+                    if(label.equals("Panneaux")){
+                        PhotoPre photo = new PhotoPre("Photo Panneaux Booster", "Panneaux_Booster");
+                        result.add(photo);
+                    }else {
+                        for (int i = 1; i <= quantite; i++) {
+                            PhotoPre photo = new PhotoPre("Photo emplacement ou ancien " + label + " " + i, label + "emplacement_ancien_" + i);
+                            result.add(photo);
+                        }
+                    }
+
+                }
+            }
+        }
 
         return result;
     }

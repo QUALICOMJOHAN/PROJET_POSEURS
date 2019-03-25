@@ -36,6 +36,12 @@ public class finalisation_inter_import_thermique extends AppCompatActivity {
             setTheme(R.style.AppTheme_Ew);
         }
 
+        if(!PoseSingleton.getInstance().getPose().getX_remise_niveau()){
+            Intent intent = new Intent(finalisation_inter_import_thermique.this, finalisation_rappel_envoi_docs.class);
+            startActivity(intent);
+            finish();
+        }
+
         setContentView(R.layout.activity_finalisation_inter_import_thermique);
 
         ImageView retour = (ImageView) findViewById(R.id.retour_btn);
