@@ -38,8 +38,8 @@ public class compte_rendu_q extends AppCompatActivity {
 
         init_tab_question();
 
-        TextView question = (TextView) findViewById(R.id.label_photo_souvenir);
-        TextView numq = (TextView) findViewById(R.id.numq);
+        question = (TextView) findViewById(R.id.label_photo_souvenir);
+        numq = (TextView) findViewById(R.id.numq);
 
         ImageView retour = (ImageView) findViewById(R.id.retour_btn);
         retour.setOnClickListener(new View.OnClickListener() {
