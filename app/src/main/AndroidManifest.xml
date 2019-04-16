@@ -81,7 +81,8 @@
         <activity android:name=".autor_donnees" />
         <activity android:name=".q_satisfaction_debut" />
         <activity android:name=".enquete_preliminaire_recap_signature" />
-        <activity android:name=".enquete_preliminaire_apres_num"></activity>
+        <activity android:name=".enquete_preliminaire_apres_num" />
+        <activity android:name=".pdf_compte_rendu_pdc_item"></activity>
     </application>
 
 </manifest>

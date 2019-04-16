@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pdf_compte_rendu_pdc_item">
+
+
+    <LinearLayout
+        android:id="@+id/item_pdc"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10mm"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cp_ctn">
+
+        <TextView
+            android:id="@+id/pdc_label"
+            android:layout_width="100mm"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:paddingLeft="1mm"
+            android:paddingRight="1mm"
+            android:text="Points de contrôle"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/pdc_resp"
+            android:layout_width="15mm"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_planning"
+            android:gravity="center"
+            android:text="Prénom"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
