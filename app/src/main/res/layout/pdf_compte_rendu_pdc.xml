@@ -200,7 +200,73 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15mm"
         app:layout_constraintTop_toBottomOf="@+id/cp_ctn"
-        tools:listitem="@layout/activity_pdf_compte_rendu_pdc_item" />
+        tools:listitem="@layout/activity_pdf_compte_rendu_pdc_item">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/label_commentaire_cr"
+        android:layout_width="210mm"
+        android:layout_height="wrap_content"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:text="Commentaire"
+        android:textAlignment="textStart"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_pdc" />
+
+    <EditText
+        android:id="@+id/pdc_commentaire_cr"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingStart="40mm"
+        android:paddingEnd="40mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_commentaire_cr" />
+
+    <TextView
+        android:id="@+id/label_conforme_cr"
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10mm"
+        android:text="Travaux conformes aux exigences de qualité et bon pour livraison au client : "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pdc_commentaire_cr" />
+
+    <LinearLayout
+        android:layout_width="170mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2mm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_conforme_cr">
+
+        <CheckBox
+            android:id="@+id/ouiconforme_cr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oui" />
+
+        <CheckBox
+            android:id="@+id/nonconforme_cr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Non" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
