@@ -5,12 +5,18 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.hendrix.pdfmyxml.PdfDocument;
+import com.hendrix.pdfmyxml.viewRenderer.AbstractViewRenderer;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -28,7 +34,10 @@ public class compte_rendu_signature extends AppCompatActivity {
     SignaturePad mSignaturePad5;
     String mCurrentSgnaturePath;
 
+    String commentaire;
+
     ArrayList<SignaturePad> pads = new ArrayList<SignaturePad>();
+    ArrayList<QuestionFinChantier> tabq = new ArrayList<QuestionFinChantier>();
 
     Button next;
 
@@ -41,6 +50,11 @@ public class compte_rendu_signature extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_compte_rendu_signature);
+
+        commentaire = getIntent().getStringExtra("commentaire");
+
+        Bundle extra = getIntent().getBundleExtra("extra");
+        tabq = (ArrayList<QuestionFinChantier>) extra.getSerializable("objects");
 
         ImageView retour = (ImageView) findViewById(R.id.retour_btn);
         retour.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +78,107 @@ public class compte_rendu_signature extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(compte_rendu_signature.this, proces_verbal_donner_tab.class);
-                startActivity(intent);
+
+
+                AbstractViewRenderer page = new AbstractViewRenderer(compte_rendu_signature.this, R.layout.pdf_compte_rendu_pdc) {
+
+                    @Override
+                    protected void initView(View view) {
+
+                        RecyclerView recyclerView;
+                        LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
+
+
+                        recyclerView = (RecyclerView) view.findViewById(R.id.list_pdc);
+                        QuestionAdapter docsAdapter = new QuestionAdapter();
+                        llm.setOrientation(LinearLayoutManager.VERTICAL);
+                        recyclerView.setLayoutManager(llm);
+                        recyclerView.setAdapter(docsAdapter);
+
+                    }
+
+                    class QuestionAdapter extends RecyclerView.Adapter<QuestionHolder> {
+
+                        @Override
+                        public QuestionHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                            View vue = getLayoutInflater().inflate(R.layout.activity_pdf_compte_rendu_pdc_item, null);
+                            return new QuestionHolder(vue);
+                        }
+
+                        @Override
+                        public void onBindViewHolder(QuestionHolder holder, int position) {
+
+                            QuestionFinChantier question = tabq.get(position);
+                            holder.bind(question);
+
+                        }
+
+                        @Override
+                        public int getItemCount() {
+                            return tabq.size();
+                        }
+                    }
+
+                    class QuestionHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+                        private TextView title;
+                        private TextView name;
+
+                        public QuestionHolder(View itemView) {
+                            super(itemView);
+
+                            title = itemView.findViewById(R.id.pdc_label);
+                            name = itemView.findViewById(R.id.pdc_resp);
+
+                        }
+
+                        public void bind(QuestionFinChantier question) {
+
+                            title.setText(question.getQuestion());
+                            name.setText(question.getReponse());
+
+                            this.itemView.setId(tabq.indexOf(question));
+                            this.itemView.setOnClickListener(this);
+
+                        }
+
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }
+                };
+
+                PdfDocument doc            = new PdfDocument(compte_rendu_signature.this);
+
+// add as many pages as you have
+                doc.addPage(page);
+
+                doc.setRenderWidth(210);
+                doc.setRenderHeight(297);
+                doc.setOrientation(PdfDocument.A4_MODE.PORTRAIT);
+                doc.setFileName("Compte_rendu");
+                doc.setSaveDirectory(compte_rendu_signature.this.getExternalFilesDir(Environment.DIRECTORY_PICTURES+"/"+PoseSingleton.getInstance().getPose().getId()));
+                doc.setInflateOnMainThread(false);
+                doc.setListener(new PdfDocument.Callback() {
+                    @Override
+                    public void onComplete(File file) {
+                        Log.i(PdfDocument.TAG_PDF_MY_XML, "Complete");
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                        Log.i(PdfDocument.TAG_PDF_MY_XML, "Error");
+                    }
+                });
+
+                doc.createPdf(compte_rendu_signature.this);
+
+// you can reuse the bitmap if you want
+                page.setReuseBitmap(true);
+
+//                Intent intent = new Intent(compte_rendu_signature.this, proces_verbal_donner_tab.class);
+//                startActivity(intent);
             }
         });
 
@@ -245,4 +358,5 @@ public class compte_rendu_signature extends AppCompatActivity {
 
         return mCurrentSgnaturePath;
     }
+
 }

@@ -1,6 +1,8 @@
 package com.example.dev_qualicom.projet_poseurs;
 
-public class QuestionFinChantier {
+import java.io.Serializable;
+
+public class QuestionFinChantier implements Serializable {
 
     private int num;
     private String question;

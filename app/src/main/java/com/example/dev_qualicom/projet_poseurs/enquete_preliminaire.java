@@ -144,7 +144,6 @@ public class enquete_preliminaire extends AppCompatActivity {
                 finish();
             }else{
                 Intent intent = new Intent(enquete_preliminaire.this, ep_mauvais.class);
-                startActivity(intent);
                 Bundle extra = new Bundle();
                 extra.putSerializable("objects", tabq);
                 intent.putExtra("extra", extra);

@@ -41,6 +41,8 @@ public class compte_rendu_q extends AppCompatActivity {
         question = (TextView) findViewById(R.id.label_photo_souvenir);
         numq = (TextView) findViewById(R.id.numq);
 
+        numq.setText("1" + "/" + tabq.size());
+
         ImageView retour = (ImageView) findViewById(R.id.retour_btn);
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,11 +77,7 @@ public class compte_rendu_q extends AppCompatActivity {
         suivant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 q_suivante(reponse);
-
-//                Intent next = new Intent(compte_rendu_q.this, compte_rendu_signature.class);
-//                startActivity(next);
             }
         });
 
@@ -134,10 +132,21 @@ public class compte_rendu_q extends AppCompatActivity {
     }
 
     private void q_suivante(String reponse){
-        tabq.get(currentq-1).setReponse(reponse);
-        currentq ++;
-        question.setText(tabq.get(currentq-1).getQuestion());
-        numq.setText(tabq.get(currentq-1).getNum()+"/"+tabq.size());
+
+        tabq.get(currentq - 1).setReponse(reponse);
+        currentq++;
+
+        if(currentq > tabq.size()){
+            Intent next = new Intent(compte_rendu_q.this, compte_rendu_conformite.class);
+            Bundle extra = new Bundle();
+            extra.putSerializable("objects", tabq);
+            next.putExtra("extra", extra);
+            startActivity(next);
+            finish();
+        }else {
+            question.setText(tabq.get(currentq - 1).getQuestion());
+            numq.setText(tabq.get(currentq - 1).getNum() + "/" + tabq.size());
+        }
     }
 
     private void init_tab_question(){
